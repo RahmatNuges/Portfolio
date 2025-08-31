@@ -19,7 +19,7 @@ const Portfolio = () => {
             <div
               key={idx}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
-              onClick={() => navigate(item.route)}
+              onClick={() => window.open(item.route)}
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
