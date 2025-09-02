@@ -13,7 +13,7 @@ const Contact = () => {
     e.preventDefault();
     const { name, email, company, message } = formData;
     // Ganti nomor di bawah dengan nomor WhatsApp Anda (format internasional tanpa +)
-    const phoneNumber = '+6285722038034';
+    const phoneNumber = '+62895389615060';
     // Template pesan
     const text = 
       `Halo, saya ingin konsultasi website!\n\n` +
