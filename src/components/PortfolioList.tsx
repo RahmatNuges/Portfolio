@@ -13,5 +13,12 @@ export const portfolioItems: PortfolioItem[] = [
     route: 'https://arsiteku.vercel.app/',
     category: 'Company Profile',
     screenshot: '/portfolio/Arsiteku.png',
+  },
+  {
+    title: 'Website Villa Management',
+    description: 'Bangun website management villa anda yang mempermudah pelanggan anda memilih dan booking villa anda!!',
+    route: 'https://villa-lime.vercel.app/',
+    category: 'Villa Management',
+    screenshot: '/portfolio/Serasi.png',
   }
 ];
