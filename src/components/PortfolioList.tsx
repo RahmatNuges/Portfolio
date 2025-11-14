@@ -20,5 +20,13 @@ export const portfolioItems: PortfolioItem[] = [
     route: 'https://villa-lime.vercel.app/',
     category: 'Villa Management',
     screenshot: '/portfolio/Serasi.png',
+  },
+  {
+    title: 'Website Tour & Travel',
+    description: 'Berikan pengalaman dan penawaran yang menarik untuk pelanggan mu!!',
+    route: 'djalandjalanjogja.my.id',
+    category: 'Tour & Travel',
+    screenshot: '',
   }
+  
 ];
