@@ -126,8 +126,8 @@ const Portfolio = () => {
                   {item.description}
                 </p>
                 
-                /* {/* Tech Stack Pills */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                {/* Tech Stack Pills */}
+                {/* <div className="flex flex-wrap gap-2 mb-4">
                   {['React', 'TypeScript', 'Tailwind'].map((tech, techIdx) => (
                     <span
                       key={techIdx}
@@ -136,7 +136,7 @@ const Portfolio = () => {
                       {tech}
                     </span>
                   ))}
-                </div> */
+                </div> */}
 
                 {/* Action Button */}
                 <div className="flex items-center justify-between">
