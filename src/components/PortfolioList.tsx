@@ -26,7 +26,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Berikan pengalaman dan penawaran yang menarik untuk pelanggan mu!!',
     route: 'https://djalandjalanjogja.my.id/',
     category: 'Tour & Travel',
-    screenshot: '',
+    screenshot: '/portfolio/Tour.png',
   }
   
 ];
