@@ -22,11 +22,25 @@ export const portfolioItems: PortfolioItem[] = [
     screenshot: '/portfolio/Serasi.png',
   },
   {
-    title: 'Website Tour & Travel',
-    description: 'Berikan pengalaman dan penawaran yang menarik untuk pelanggan mu!!',
-    route: 'https://djalandjalanjogja.my.id/',
-    category: 'Tour & Travel',
-    screenshot: '/portfolio/Tour.png',
+    title: 'Website Catalog Brand Clothing',
+    description: 'Tampilkan koleksi fashion streetwear dengan katalog interaktif untuk brand clothing modern.',
+    route: 'https://doudletfasy.id/',
+    category: 'Fashion Catalog',
+    screenshot: '/portfolio/Clothing.png',
+  },
+  {
+    title: 'Website Rental Mobil',
+    description: 'Permudah pelanggan menemukan dan memesan layanan rental mobil secara online dengan informasi armada lengkap.',
+    route: 'https://gibranrentcar.com/',
+    category: 'Rental Transportasi',
+    screenshot: '/portfolio/Rental.png',
+  },
+  {
+    title: 'Website Jasa Ahli Kunci',
+    description: 'Solusi ahli kunci profesional 24/7 untuk kebutuhan mobil dan rumah dengan layanan darurat cepat.',
+    route: 'https://ahlikunciakkhay.com/',
+    category: 'Jasa Layanan',
+    screenshot: '/portfolio/ahliKunci.png',
   }
   
 ];

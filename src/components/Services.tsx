@@ -1,49 +1,53 @@
 import React from 'react';
-import { Globe, ShoppingCart, Smartphone, Search, Palette, Headphones } from 'lucide-react';
+import { Smartphone, Layers, Sparkles } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Globe,
-      title: 'Company Profile Websites',
-      description: 'Professional corporate websites that establish credibility and showcase your business effectively.',
-      features: ['Responsive Design', 'SEO Optimized', 'Content Management', 'Contact Forms'],
-      price: 'Starting from $800'
-    },
-    {
-      icon: ShoppingCart,
-      title: 'E-commerce Solutions',
-      description: 'Complete online stores with payment integration, inventory management, and customer accounts.',
-      features: ['Payment Gateway', 'Product Catalog', 'Order Management', 'Customer Portal'],
-      price: 'Starting from $1,200'
-    },
-    {
       icon: Smartphone,
-      title: 'Landing Pages',
-      description: 'High-converting landing pages designed to capture leads and drive specific business goals.',
-      features: ['Conversion Focused', 'A/B Testing Ready', 'Analytics Integration', 'Fast Loading'],
-      price: 'Starting from $400'
+      title: 'Landing Page 1 Halaman',
+      description: 'Solusi cepat untuk bisnis yang butuh website profesional satu halaman dengan fokus konversi.',
+      features: [
+        'Desain responsif',
+        'Gratis Domain .com (1 tahun)',
+        'Hosting dari kami',
+        'Dukungan teknis 30 hari',
+        'Bebas request desain',
+        'SEO standar'
+      ],
+      price: 'Mulai dari Rp1.000.000 an'
     },
     {
-      icon: Search,
-      title: 'SEO Optimization',
-      description: 'Improve your website\'s visibility on search engines and attract more organic traffic.',
-      features: ['Keyword Research', 'On-page SEO', 'Technical SEO', 'Performance Reports'],
-      price: 'Starting from $300'
+      icon: Layers,
+      title: 'Landing Page 5 Halaman + Admin Panel',
+      description: 'Landing page multi-section lengkap dengan dashboard admin sederhana untuk kelola konten.',
+      features: [
+        'Desain responsif',
+        'Gratis Domain .com (1 tahun)',
+        'Hosting dari kami',
+        'Dukungan teknis 30 hari',
+        'Bebas request desain',
+        'Admin Panel',
+        'SEO standar',
+        'Integrasi Google Analytics'
+      ],
+      price: 'Mulai dari Rp1.500.000 an'
     },
     {
-      icon: Palette,
-      title: 'Website Redesign',
-      description: 'Modernize your existing website with fresh design and improved user experience.',
-      features: ['Modern Design', 'UX Improvements', 'Mobile Optimization', 'Speed Enhancement'],
-      price: 'Starting from $600'
-    },
-    {
-      icon: Headphones,
-      title: 'Maintenance & Support',
-      description: 'Ongoing website maintenance, updates, and technical support to keep your site running smoothly.',
-      features: ['Regular Updates', 'Security Monitoring', 'Backup Services', '24/7 Support'],
-      price: 'Starting from $100/month'
+      icon: Sparkles,
+      title: 'Special Request',
+      description: 'Pengembangan website custom seperti toko online, kelas online, manajemen villa, atau kebutuhan unik lainnya.',
+      features: [
+        'Desain responsif',
+        'Gratis Domain .com (1 tahun)',
+        'Hosting dari kami',
+        'Dukungan teknis 30 hari',
+        'Bebas request desain',
+        'Admin Panel',
+        'SEO standar',
+        'Integrasi Google Analytics'
+      ],
+      price: 'Hubungi kami untuk penawaran khusus'
     }
   ];
 
@@ -52,11 +56,10 @@ const Services = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            My Services
+            Layanan Kami
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            I offer comprehensive web development services tailored to help your 
-            business succeed online and reach your target audience effectively.
+            Kami membantu bisnis Anda memiliki website profesional yang siap mendukung pertumbuhan dan menjangkau audiens dengan tepat.
           </p>
         </div>
 
@@ -95,7 +98,7 @@ const Services = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
-            Need a custom solution? Let's discuss your specific requirements.
+            Butuh solusi khusus? Yuk diskusikan kebutuhan spesifik bisnismu bersama kami.
           </p>
           <button 
             onClick={() => {
@@ -106,7 +109,7 @@ const Services = () => {
             }}
             className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Get Custom Quote
+            Dapatkan Penawaran
           </button>
         </div>
       </div>
