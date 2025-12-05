@@ -29,8 +29,7 @@ const Services = () => {
         'Admin Panel',
         'SEO standar',
         'Integrasi Google Analytics'
-      ],
-      price: 'Mulai dari Rp1.500.000 an'
+      ]
     },
     {
       icon: Sparkles,
@@ -45,8 +44,7 @@ const Services = () => {
         'Admin Panel',
         'SEO standar',
         'Integrasi Google Analytics'
-      ],
-      price: 'Hubungi kami untuk penawaran khusus'
+      ]
     }
   ];
 
