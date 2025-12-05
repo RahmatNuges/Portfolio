@@ -14,8 +14,7 @@ const Services = () => {
         'Dukungan teknis 30 hari',
         'Bebas request desain',
         'SEO standar'
-      ],
-      price: 'Mulai dari Rp1.000.000 an'
+      ]
     },
     {
       icon: Layers,
