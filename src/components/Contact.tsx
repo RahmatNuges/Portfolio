@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,19 +11,15 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { name, email, company, message } = formData;
-    // Ganti nomor di bawah dengan nomor WhatsApp Anda (format internasional tanpa +)
+    const { name, company, message } = formData;
     const phoneNumber = '+62895389615060';
-    // Template pesan
-    const text = 
+    const text =
       `Halo, saya ingin konsultasi website!\n\n` +
-      `Nama saya ${name}\n` +
-      `Dari Perusahaan ${company}\n` +
-      `Detail Proyek : ${message}`;
-    // Encode pesan untuk URL
+      `Nama: ${name}\n` +
+      `Perusahaan: ${company}\n` +
+      `Detail Proyek: ${message}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
-    // Reset form jika ingin
     setFormData({ name: '', email: '', company: '', message: '' });
   };
 
@@ -35,71 +31,78 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Langsung Hubungi Saya
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            Hubungi Saya
           </h2>
+          <p className="text-lg text-slate-600">
+            Siap membantu mewujudkan website impian Anda
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
-              Hubungi Saya
+            <h3 className="text-xl font-bold text-slate-900 mb-8">
+              Informasi Kontak
             </h3>
-            
-            <div className="space-y-6 mb-8">
-              <div className="flex items-center">
-                <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                  <Mail className="w-6 h-6 text-blue-600" />
+
+            <div className="space-y-6 mb-10">
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <Mail className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">rahmatnugess@gmail.com</p>
+                  <h4 className="font-semibold text-slate-900 mb-1">Email</h4>
+                  <a href="mailto:naikin.bisnis@gmail.com" className="text-slate-600 hover:text-blue-600 transition-colors">
+                    naikin.bisnis@gmail.com
+                  </a>
                 </div>
               </div>
-              
-              <div className="flex items-center">
-                <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                  <Phone className="w-6 h-6 text-blue-600" />
+
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <Phone className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Telepon</h4>
-                  <p className="text-gray-600">+62895389615060</p>
+                  <h4 className="font-semibold text-slate-900 mb-1">Telepon / WhatsApp</h4>
+                  <a href="tel:+62895389615060" className="text-slate-600 hover:text-blue-600 transition-colors">
+                    +62 895 389615060
+                  </a>
                 </div>
               </div>
-              
-              <div className="flex items-center">
-                <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                  <MapPin className="w-6 h-6 text-blue-600" />
+
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Lokasi</h4>
-                  <p className="text-gray-600">Tersedia di Seluruh Dunia</p>
+                  <h4 className="font-semibold text-slate-900 mb-1">Lokasi</h4>
+                  <p className="text-slate-600">Indonesia (Remote Worldwide)</p>
                 </div>
               </div>
             </div>
 
-            {/* Quick Contact Buttons */}
-            <div className="space-y-4">
-              <h4 className="font-semibold text-gray-900 mb-4">Kontak Cepat</h4>
-              <div className="flex flex-col sm:flex-row gap-4">
+            {/* Quick Contact */}
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-4">Kontak Langsung</h4>
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="https://wa.me/+62895389615060"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
                 >
-                  <MessageSquare className="mr-2" size={20} />
+                  <MessageSquare className="mr-2 w-5 h-5" />
                   WhatsApp
                 </a>
                 <a
-                  href="mailto:rahmatnugess@gmail.com"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                  href="mailto:naikin.bisnis@gmail.com"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  <Mail className="mr-2" size={20} />
+                  <Mail className="mr-2 w-5 h-5" />
                   Email
                 </a>
               </div>
@@ -108,15 +111,15 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">
                 Kirim Pesan
               </h3>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
+
+              <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nama Lengkap *
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                    Nama Lengkap
                   </label>
                   <input
                     type="text"
@@ -125,14 +128,14 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    placeholder="Nama lengkap Anda"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="Nama Anda"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Alamat Email *
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                    Email
                   </label>
                   <input
                     type="email"
@@ -141,14 +144,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="email@anda.com"
                   />
                 </div>
               </div>
-              
-              <div className="mb-6">
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+
+              <div className="mb-4">
+                <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
                   Nama Perusahaan
                 </label>
                 <input
@@ -157,14 +160,14 @@ const Contact = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Nama perusahaan Anda"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  placeholder="Nama perusahaan (opsional)"
                 />
               </div>
-              
+
               <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Detail Proyek *
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                  Detail Proyek
                 </label>
                 <textarea
                   id="message"
@@ -172,18 +175,18 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-vertical"
+                  rows={4}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                   placeholder="Ceritakan kebutuhan proyek Anda..."
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Kirim Pesan
-                <Send className="ml-2" size={20} />
+                Kirim via WhatsApp
+                <Send className="ml-2 w-5 h-5" />
               </button>
             </form>
           </div>
