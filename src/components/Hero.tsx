@@ -74,7 +74,7 @@ const Hero = () => {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/hero-image.png"
+                  src="/Hero-Image.webp"
                   alt="Pemilik bisnis yang puas dengan website barunya"
                   className="w-full max-w-md object-cover"
                 />
