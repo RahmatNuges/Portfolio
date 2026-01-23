@@ -60,7 +60,7 @@ const About = () => {
 
             <p className="text-slate-600 leading-relaxed mb-8">
               Kami paham bahwa Anda sibuk mengurus bisnis dan tidak punya waktu
-              untuk urusan teknis. Karena itu, kami yang mengerjakan semuanya —
+              untuk urusan teknis. Karena itu, kami yang mengerjakan semuanya mulai
               dari desain hingga website online dan siap digunakan.
             </p>
 
