@@ -10,6 +10,13 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Website Company Profile',
     description: 'Tunjukkan profesionalisme bisnis Anda dengan website company profile yang elegan dan mudah diakses. Cocok untuk membangun kepercayaan klien baru!',
+    route: 'klinikgigi-three.vercel.app',
+    category: 'Company Profile',
+    screenshot: '/portfolio/Klinik.webp',
+  },
+  {
+    title: 'Website Company Profile',
+    description: 'Tunjukkan profesionalisme bisnis Anda dengan website company profile yang elegan dan mudah diakses. Cocok untuk membangun kepercayaan klien baru!',
     route: 'https://arsiteku.vercel.app/',
     category: 'Company Profile',
     screenshot: '/portfolio/Arsiteku.webp',
