@@ -10,7 +10,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Website Dental Clinic',
     description: 'Bangun kepercayaan pelanggan dengan website yang profesional dan elegan.',
-    route: 'klinikgigi-three.vercel.app',
+    route: 'https://klinikgigi-three.vercel.app/',
     category: 'Company Profile',
     screenshot: '/portfolio/Klinik.webp',
   },
