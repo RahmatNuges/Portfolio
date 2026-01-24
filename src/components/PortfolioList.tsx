@@ -15,7 +15,7 @@ export const portfolioItems: PortfolioItem[] = [
     screenshot: '/portfolio/Klinik.webp',
   },
   {
-    title: 'Website Company Profile',
+    title: 'Website Portfolio Arsitektur',
     description: 'Tunjukkan profesionalisme bisnis Anda dengan website company profile yang elegan dan mudah diakses. Cocok untuk membangun kepercayaan klien baru!',
     route: 'https://arsiteku.vercel.app/',
     category: 'Company Profile',
