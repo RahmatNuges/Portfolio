@@ -8,8 +8,8 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Website Company Profile',
-    description: 'Tunjukkan profesionalisme bisnis Anda dengan website company profile yang elegan dan mudah diakses. Cocok untuk membangun kepercayaan klien baru!',
+    title: 'Website Dental Clinic',
+    description: 'Bangun kepercayaan pelanggan dengan website yang profesional dan elegan.',
     route: 'klinikgigi-three.vercel.app',
     category: 'Company Profile',
     screenshot: '/portfolio/Klinik.webp',
