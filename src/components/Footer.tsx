@@ -61,11 +61,11 @@ const Footer = () => {
                 <span className="text-sm">naikin.bisnis@gmail.com</span>
               </a>
               <a
-                href="tel:+62895389615060"
+                href="tel:+6282342310221"
                 className="flex items-center text-slate-400 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span className="text-sm">+62 895 389615060</span>
+                <span className="text-sm">+62 823 42310221</span>
               </a>
               <div className="flex items-center text-slate-400">
                 <MapPin className="w-4 h-4 mr-3 flex-shrink-0" />
