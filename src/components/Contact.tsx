@@ -12,7 +12,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { name, company, message } = formData;
-    const phoneNumber = '+62895389615060';
+    const phoneNumber = '+6282342310221';
     const text =
       `Halo, saya ingin konsultasi website!\n\n` +
       `Nama: ${name}\n` +
@@ -68,8 +68,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 mb-1">Telepon / WhatsApp</h4>
-                  <a href="tel:+62895389615060" className="text-slate-600 hover:text-blue-600 transition-colors">
-                    +62 895 389615060
+                  <a href="tel:+6282342310221" className="text-slate-600 hover:text-blue-600 transition-colors">
+                    +62 823 42310221
                   </a>
                 </div>
               </div>
@@ -90,7 +90,7 @@ const Contact = () => {
               <h4 className="font-semibold text-slate-900 mb-4">Kontak Langsung</h4>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://wa.me/+62895389615060"
+                  href="https://wa.me/+6282342310221"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
