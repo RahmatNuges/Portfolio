@@ -5,7 +5,7 @@ const Services = () => {
   const services = [
     {
       icon: Smartphone,
-      title: 'Website 1 Halaman',
+      title: 'Website 5 Halaman',
       subtitle: 'Untuk UMKM & Bisnis Baru',
       description: 'Cocok untuk bisnis yang ingin mulai tampil profesional di internet dengan budget terjangkau.',
       features: [
@@ -23,8 +23,8 @@ const Services = () => {
       subtitle: 'Untuk Bisnis Berkembang',
       description: 'Website lengkap dengan beberapa halaman untuk menampilkan semua informasi bisnis Anda.',
       features: [
-        'Semua fitur Website 1 Halaman',
-        'Hingga 5 halaman',
+        'Semua fitur Website 5 Halaman',
+        'Hingga >10 halaman',
         'Panel admin untuk edit sendiri',
         'Integrasi WhatsApp',
         'Support 30 hari'
