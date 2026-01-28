@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="text-center lg:text-left space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
-              ✨ Jasa Pembuatan Website Profesional
+              Jasa Pembuatan Website Profesional
             </div>
 
             {/* Main Headline - Benefit focused */}
