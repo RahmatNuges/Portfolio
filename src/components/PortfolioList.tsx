@@ -12,7 +12,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Bangun kepercayaan pelanggan dengan website yang profesional dan elegan.',
     route: 'https://klinikgigi-three.vercel.app/',
     category: 'Company Profile',
-    screenshot: '/portfolio/Klinik.webp',
+    screenshot: '/portfolio/klinik_gigi.webp',
   },
   {
     title: 'Website Portfolio Arsitektur',
@@ -27,27 +27,5 @@ export const portfolioItems: PortfolioItem[] = [
     route: 'https://villa-lime.vercel.app/',
     category: 'Villa Management',
     screenshot: '/portfolio/Serasi.webp',
-  },
-  {
-    title: 'Website Catalog Brand Clothing',
-    description: 'Tampilkan koleksi fashion streetwear dengan katalog interaktif untuk brand clothing modern.',
-    route: 'https://doudletfasy.id/',
-    category: 'Fashion Catalog',
-    screenshot: '/portfolio/Clothing.webp',
-  },
-  {
-    title: 'Website Rental Mobil',
-    description: 'Permudah pelanggan menemukan dan memesan layanan rental mobil secara online dengan informasi armada lengkap.',
-    route: 'https://gibranrentcar.com/',
-    category: 'Rental Transportasi',
-    screenshot: '/portfolio/Rental.webp',
-  },
-  {
-    title: 'Website Jasa Ahli Kunci',
-    description: 'Solusi ahli kunci profesional 24/7 untuk kebutuhan mobil dan rumah dengan layanan darurat cepat.',
-    route: 'https://ahlikunciakkhay.com/',
-    category: 'Jasa Layanan',
-    screenshot: '/portfolio/ahliKunci.webp',
   }
-  
 ];
