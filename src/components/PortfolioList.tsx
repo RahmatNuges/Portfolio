@@ -19,7 +19,7 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Tunjukkan profesionalisme bisnis Anda dengan website company profile yang elegan dan mudah diakses. Cocok untuk membangun kepercayaan klien baru!',
     route: 'https://arsiteku.vercel.app/',
     category: 'Company Profile',
-    screenshot: '/portfolio/Arsiteku.webp',
+    screenshot: '/portfolio/Arsitek.webp',
   },
   {
     title: 'Website Villa Management',
