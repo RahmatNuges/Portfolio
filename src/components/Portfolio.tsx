@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ExternalLink, Globe, Smartphone, Code, ArrowUpRight } from 'lucide-react';
 import { portfolioItems } from './PortfolioList';
 
@@ -69,7 +69,7 @@ const Portfolio = () => {
                 </div>
 
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/20 transition-colors duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent group-hover:from-black/50 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
                       <ArrowUpRight className="w-5 h-5 text-slate-700" />
@@ -88,9 +88,11 @@ const Portfolio = () => {
                 </p>
 
                 {/* View Link */}
-                <div className="mt-4 flex items-center text-blue-600 text-sm font-medium">
-                  <span>Lihat Website</span>
-                  <ExternalLink className="w-4 h-4 ml-1.5" />
+                <div className="mt-4">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 text-sm font-medium rounded-lg group-hover:bg-blue-100 transition-colors">
+                    Lihat Website
+                    <ExternalLink className="w-4 h-4" />
+                  </span>
                 </div>
               </div>
             </a>

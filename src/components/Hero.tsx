@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const Hero = () => {
@@ -21,20 +21,32 @@ const Hero = () => {
               Jasa Pembuatan Website Profesional
             </div>
 
-            {/* Main Headline - Benefit focused */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+            {/* Main Headline - Mobile Version (condensed) */}
+            <h1 className="sm:hidden text-4xl font-bold text-slate-900 leading-tight">
+              Website Profesional,{' '}
+              <span className="text-blue-600">Lebih Banyak Pelanggan</span>
+            </h1>
+
+            {/* Main Headline - Desktop Version (original) */}
+            <h1 className="hidden sm:block text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
               Dapatkan Lebih Banyak{' '}
               <span className="text-blue-600">Pelanggan</span>{' '}
               dengan Website Profesional
             </h1>
 
-            <p className="text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
+            {/* Description - Mobile Version (condensed) */}
+            <p className="sm:hidden text-lg text-slate-600 leading-relaxed">
+              85% calon pelanggan mencari bisnis online sebelum membeli. Jangan kehilangan mereka.
+            </p>
+
+            {/* Description - Desktop Version (original) */}
+            <p className="hidden sm:block text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
               85% calon pelanggan mencari bisnis di internet sebelum membeli.
               Tanpa website, bisnis Anda bisa kehilangan banyak peluang setiap harinya.
             </p>
 
-            {/* Trust points */}
-            <div className="space-y-3 text-left">
+            {/* Trust points - hidden on mobile */}
+            <div className="hidden sm:block space-y-3 text-left">
               <div className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                 <span className="text-slate-700">Desain profesional yang membangun kepercayaan</span>
@@ -53,17 +65,17 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg shadow-blue-600/25"
+                className="px-10 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all duration-200 shadow-xl shadow-blue-600/40 hover:shadow-2xl hover:shadow-blue-600/50 hover:-translate-y-0.5"
               >
-                Konsultasi Gratis
+                Konsultasi Gratis →
               </button>
 
               <button
                 onClick={() => scrollToSection('portfolio')}
-                className="px-8 py-4 border-2 border-slate-300 text-slate-700 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors duration-200 flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-transparent border border-slate-300 text-slate-600 font-medium rounded-lg hover:border-slate-400 hover:text-slate-700 transition-colors duration-200 flex items-center justify-center gap-2"
               >
-                Lihat Hasil Kerja Kami
-                <ArrowRight className="w-5 h-5" />
+                Lihat Portfolio
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
