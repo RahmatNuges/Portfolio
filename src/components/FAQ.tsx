@@ -13,11 +13,11 @@ export default function FAQ() {
     },
     {
       q: 'Saya tidak punya konten/foto, apakah bisa tetap dikerjakan?',
-      a: 'Bisa! Kami bantu dari nol. NAIKIN punya tim copywriter dan kurator gambar yang bisa menyiapkan konten awal. Kamu tinggal review dan approve.',
+      a: 'Bisa! Kami bantu dari nol. NAIKIN punya tim copywriter dan gambar yang dibantu AI yang bisa menyiapkan konten awal. Kamu tinggal review dan approve.',
     },
     {
-      q: 'Apakah website saya tetap bisa dikelola sendiri setelahnya?',
-      a: 'Ya. Kami pakai CMS yang ramah pengguna (WordPress atau custom) dan kami berikan pelatihan singkat supaya kamu bisa update konten sendiri tanpa harus selalu menghubungi kami.',
+      q: 'Apakah biaya sudah termasuk hosting dan domain?',
+      a: 'Ya, semua paket kami sudah all-in. Kamu sudah dapat domain (.com/.id) dan hosting berkecepatan tinggi untuk tahun pertama. Jadi kamu tinggal terima beres tanpa pusing biaya tambahan yang tersembunyi.',
     },
     {
       q: 'Bagaimana sistem pembayarannya?',

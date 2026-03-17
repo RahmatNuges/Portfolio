@@ -42,7 +42,14 @@ export default function Portfolio() {
               rel="noopener noreferrer"
             >
               <div className="portfolio-thumb">
-                <img src={p.image} alt={p.title} className="portfolio-img" />
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="portfolio-img"
+                  loading="lazy"
+                  srcSet={`${p.image} 800w`}
+                  sizes="(max-width: 767px) calc(100vw - 32px), (max-width: 991px) calc(50vw - 40px), calc(50vw - 64px)"
+                />
                 <div className="portfolio-overlay">
                   <div className="overlay-btn">
                     <ArrowUpRight size={20} />

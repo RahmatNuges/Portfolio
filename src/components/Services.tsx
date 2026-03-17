@@ -48,7 +48,14 @@ export default function Services() {
           <div className="service-row website-row" data-aos="fade-up">
             <div className="service-visual">
               <div className="mockup-container">
-                <img src="/website-mockup.webp" alt="Website Mockup" className="mockup-img" />
+                <img
+                  src="/website-mockup.webp"
+                  alt="Website Mockup"
+                  className="mockup-img"
+                  loading="lazy"
+                  srcSet="/website-mockup.webp 700w"
+                  sizes="(max-width: 767px) calc(100vw - 32px), 50vw"
+                />
                 <div className="floating-badge badge-1">Mobile Ready</div>
                 <div className="floating-badge badge-2">Fast Load</div>
               </div>

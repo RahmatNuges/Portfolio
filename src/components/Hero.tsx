@@ -92,12 +92,25 @@ export default function Hero() {
             <div className="slider-container">
               <div className="slider-track" style={{ transform: `translateX(-${currentSlide * 50}%)` }}>
                 <div className="slide">
-                  <img src="/hero-section1.webp" alt="NAIKIN Dashboard Analytics" className="main-hero-img" onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/hero-image.png";
-                  }} />
+                  <img
+                    src="/hero-section1.webp"
+                    alt="NAIKIN Dashboard Analytics"
+                    className="main-hero-img"
+                    loading="eager"
+                    fetchPriority="high"
+                    srcSet="/hero-section1.webp 900w"
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                  />
                 </div>
                 <div className="slide">
-                  <img src="/team-image.png" alt="NAIKIN Team" className="main-hero-img" />
+                  <img
+                    src="/team-image.webp"
+                    alt="NAIKIN Team"
+                    className="main-hero-img"
+                    loading="lazy"
+                    srcSet="/team-image.webp 900w"
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
