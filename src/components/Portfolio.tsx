@@ -1,106 +1,255 @@
+import { ArrowUpRight } from 'lucide-react';
 
-import { ExternalLink, Globe, Smartphone, Code, ArrowUpRight } from 'lucide-react';
-import { portfolioItems } from './PortfolioList';
-
-const Portfolio = () => {
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'company profile':
-        return <Globe className="w-4 h-4" />;
-      case 'landing page':
-        return <Smartphone className="w-4 h-4" />;
-      default:
-        return <Code className="w-4 h-4" />;
-    }
-  };
+export default function Portfolio() {
+  const projects = [
+    {
+      title: 'Renie Dent',
+      type: 'Klinik Gigi',
+      image: '/portfolio/renie-dent.webp',
+      link: 'https://reniedent.id/'
+    },
+    {
+      title: 'Arsiteku',
+      type: 'Portfolio Project',
+      image: '/portfolio/Arsitek.webp',
+      link: 'https://arsiteku.vercel.app/'
+    },
+    {
+      title: 'Toto Dental',
+      type: 'Klinik Gigi',
+      image: '/portfolio/klinik_gigi.webp',
+      link: 'https://klinikgigi-three.vercel.app/'
+    },
+  ];
 
   return (
-    <section id="portfolio" className="py-20 bg-slate-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            Portfolio
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Beberapa proyek yang telah saya kerjakan untuk klien dari berbagai industri.
-          </p>
+    <section className="portfolio section" id="portofolio">
+      <div className="container">
+        <div className="section-header" data-aos="fade-up">
+          <p className="section-label">PORTOFOLIO</p>
+          <h2>Hasil Nyata Klien Kami</h2>
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolioItems.map((item, idx) => (
-            <a
-              key={idx}
-              href={item.route}
+        <div className="portfolio-grid">
+          {projects.map((p, i) => (
+            <a 
+              key={i} 
+              href={p.link} 
+              className="portfolio-card" 
+              data-aos="fade-up" 
+              data-aos-delay={i * 100}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-slate-200"
             >
-              {/* Image Container */}
-              <div className="relative h-52 overflow-hidden bg-slate-100">
-                {item.screenshot ? (
-                  <img
-                    src={item.screenshot}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const fallback = target.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-                ) : null}
-
-                {/* Fallback */}
-                <div className={`w-full h-full bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center ${item.screenshot ? 'hidden' : 'flex'}`}>
-                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center">
-                    {getCategoryIcon(item.category)}
-                  </div>
-                </div>
-
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-medium rounded-full shadow-sm">
-                    {getCategoryIcon(item.category)}
-                    {item.category}
-                  </span>
-                </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent group-hover:from-black/50 transition-all duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
-                      <ArrowUpRight className="w-5 h-5 text-slate-700" />
-                    </div>
+              <div className="portfolio-thumb">
+                <img src={p.image} alt={p.title} className="portfolio-img" />
+                <div className="portfolio-overlay">
+                  <div className="overlay-btn">
+                    <ArrowUpRight size={20} />
                   </div>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 text-sm leading-relaxed line-clamp-2">
-                  {item.description}
-                </p>
-
-                {/* View Link */}
-                <div className="mt-4">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 text-sm font-medium rounded-lg group-hover:bg-blue-100 transition-colors">
-                    Lihat Website
-                    <ExternalLink className="w-4 h-4" />
-                  </span>
+              <div className="portfolio-info">
+                <div className="info-main">
+                  <span className="info-label">{p.type.toUpperCase()}</span>
+                  <h3 className="info-title">{p.title}</h3>
+                </div>
+                <div className="portfolio-btn">
+                  Lihat Website <ArrowUpRight size={16} />
                 </div>
               </div>
             </a>
           ))}
         </div>
+
+        <div className="portfolio-footer" data-aos="fade-up">
+          <p className="footer-note">Lebih dari 150+ bisnis telah bertumbuh bersama kami</p>
+          <a href="#" className="btn-outline">Lihat Selengkapnya</a>
+        </div>
       </div>
+
+      <style>{`
+        .portfolio {
+          background: #0F1923;
+          padding: 100px 0;
+        }
+
+        .portfolio .section-label { color: var(--accent); }
+        .portfolio h2 { color: white; margin-bottom: 60px; }
+
+        .portfolio-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 32px;
+          margin-bottom: 60px;
+        }
+
+        .portfolio-card {
+          background: #1A242D;
+          border-radius: 24px;
+          padding: 16px;
+          transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          text-decoration: none;
+        }
+
+        .portfolio-card:hover {
+          transform: translateY(-10px);
+          background: #232D37;
+          border-color: rgba(53, 158, 255, 0.3);
+          box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
+        }
+
+        .portfolio-thumb {
+          position: relative;
+          aspect-ratio: 16 / 9;
+          border-radius: 16px;
+          overflow: hidden;
+          background: #000;
+        }
+
+        .portfolio-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s ease;
+          opacity: 1;
+          object-position: top;
+        }
+
+        .portfolio-card:hover .portfolio-img {
+          transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+          position: absolute;
+          inset: 0;
+          background: rgba(15, 25, 35, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .portfolio-card:hover .portfolio-overlay {
+          opacity: 1;
+        }
+
+        .overlay-btn {
+          width: 50px;
+          height: 50px;
+          background: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: black;
+          transform: scale(0.8);
+          transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .portfolio-card:hover .overlay-btn {
+          transform: scale(1);
+        }
+
+        .portfolio-info {
+          padding: 4px 8px 8px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+        }
+
+        .info-main {
+          flex: 1;
+        }
+
+        .info-label {
+          display: block;
+          font-family: var(--font-body);
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          color: rgba(255, 255, 255, 0.4);
+          margin-bottom: 4px;
+        }
+
+        .info-title {
+          font-family: var(--font-display);
+          font-size: 22px;
+          font-weight: 700;
+          color: white;
+          line-height: 1.2;
+        }
+
+        .portfolio-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          background: white;
+          color: black;
+          padding: 10px 20px;
+          border-radius: 100px;
+          font-size: 13px;
+          font-weight: 700;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+        }
+
+        .portfolio-card:hover .portfolio-btn {
+          background: var(--accent);
+          color: white;
+        }
+
+        .portfolio-footer {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+
+        .footer-note {
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 15px;
+        }
+
+        .btn-outline {
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: white;
+          padding: 14px 32px;
+          border-radius: 100px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          display: inline-block;
+        }
+
+        .btn-outline:hover {
+          background: white;
+          color: black;
+          border-color: white;
+        }
+
+        @media (max-width: 991px) {
+          .portfolio-grid { gap: 24px; }
+          .info-title { font-size: 18px; }
+          .portfolio-btn { padding: 8px 16px; font-size: 12px; }
+        }
+
+        @media (max-width: 767px) {
+          .portfolio-grid { grid-template-columns: 1fr; }
+          .portfolio { padding: 60px 0; }
+          .portfolio-info { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+          .info-title { font-size: 18px; }
+          .portfolio-btn { width: auto; font-size: 12px; padding: 8px 16px; }
+        }
+      `}</style>
     </section>
   );
-};
-
-export default Portfolio;
+}

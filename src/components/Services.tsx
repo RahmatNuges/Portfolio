@@ -1,128 +1,375 @@
-import React from 'react';
-import { Smartphone, Layers, Sparkles, Check, ArrowRight } from 'lucide-react';
+import { Monitor, Search, CheckCircle } from 'lucide-react';
 
-const Services = () => {
+export default function Services() {
   const services = [
     {
-      icon: Smartphone,
-      title: 'Website 5 Halaman',
-      subtitle: 'Untuk UMKM & Bisnis Baru',
-      description: 'Cocok untuk bisnis yang ingin mulai tampil profesional di internet dengan budget terjangkau.',
+      icon: <Monitor size={36} />,
+      title: 'Website yang Menjual, Bukan Sekadar Ada',
+      desc: 'Calon pelanggan akan googling nama bisnis kamu sebelum mereka hubungi kamu. Kalau yang mereka temukan tidak meyakinkan, mereka pergi ke kompetitor. Kami pastikan itu tidak terjadi.',
       features: [
-        'Desain premium & responsif',
-        'Gratis domain .com (1 tahun)',
-        'Hosting aman dari kami',
-        'Mudah ditemukan di Google',
-        'Support 30 hari'
+        'Desain custom sesuai brand',
+        'Buka dalam hitungan detik, pengunjung tidak kabur sebelum lihat produk kamu',
+        'Tampil sempurna di HP, tablet, maupun laptop',
+        'Tombol WhatsApp langsung di website, calon klien tinggal tap, langsung chat kamu',
+        'Revisi sampai kamu senyum, tidak ada biaya tambahan',
       ],
-      highlight: false
     },
     {
-      icon: Layers,
-      title: 'Website Company Profile',
-      subtitle: 'Untuk Bisnis Berkembang',
-      description: 'Website lengkap dengan beberapa halaman untuk menampilkan semua informasi bisnis Anda.',
+      icon: <Search size={36} />,
+      title: 'Muncul di Google Saat Orang Butuh Kamu',
+      desc: "Bayangkan ada orang di Jogja yang ketik 'jasa [bisnis kamu] Jogja' di Google. Kami pastikan nama kamu yang muncul, bukan kompetitor kamu.",
       features: [
-        'Semua fitur Website 5 Halaman',
-        'Hingga >10 halaman',
-        'Panel admin untuk edit sendiri',
-        'Integrasi WhatsApp',
-        'Support 30 hari'
+        'Kami cari tahu kata-kata apa yang diketik calon pelanggan kamu di Google',
+        "Website kamu dibuat 'disukai' Google dari dalam dan luar",
+        'Reputasi website kamu dibangun sehingga Google makin percaya dan makin sering menampilkan kamu',
+        'Setiap bulan kamu lihat sendiri: berapa orang menemukan bisnis kamu lewat Google',
+        'Konten yang ditulis bukan asal-asalan, tapi berdasarkan apa yang benar-benar dicari orang',
       ],
-      highlight: true
     },
-    {
-      icon: Sparkles,
-      title: 'Website Custom',
-      subtitle: 'Untuk Kebutuhan Khusus',
-      description: 'Solusi khusus seperti toko online, sistem booking, atau website dengan fitur unik lainnya.',
-      features: [
-        'Semua fitur Company Profile',
-        'Fitur sesuai kebutuhan',
-        'E-commerce / Booking system',
-        'Integrasi dengan tools lain',
-        'Support diperpanjang'
-      ],
-      highlight: false
-    }
+  ];
+
+  const addons = [
+    'Copywriting halaman website',
+    'Setup Google Business Profile',
+    'Pemeliharaan & update website',
+    'Konsultasi strategi digital',
   ];
 
   return (
-    <section id="services" className="py-20 bg-slate-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-            Pilih Paket yang Sesuai
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Apapun kebutuhan bisnis Anda, kami punya solusi website yang tepat.
-            Konsultasi dulu, gratis!
-          </p>
+    <section className="services section" id="layanan">
+      <div className="container">
+        <div className="section-header" data-aos="fade-up">
+          <p className="section-label">APA YANG KAMI KERJAKAN</p>
+          <h2 className="title-large">Dua Senjata Utama untuk Bisnis Kamu Online</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`rounded-2xl p-8 transition-all duration-300 ${service.highlight
-                  ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/25 scale-105'
-                  : 'bg-white border border-slate-200 hover:border-blue-300 hover:shadow-lg'
-                }`}
-            >
-              {service.highlight && (
-                <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4">
-                  Paling Populer
-                </div>
-              )}
-
-              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${service.highlight ? 'bg-white/20' : 'bg-blue-100'
-                }`}>
-                <service.icon className={`w-7 h-7 ${service.highlight ? 'text-white' : 'text-blue-600'}`} />
+        <div className="services-list">
+          {/* Service 1: Website */}
+          <div className="service-row website-row" data-aos="fade-up">
+            <div className="service-visual">
+              <div className="mockup-container">
+                <img src="/website-mockup.webp" alt="Website Mockup" className="mockup-img" />
+                <div className="floating-badge badge-1">Mobile Ready</div>
+                <div className="floating-badge badge-2">Fast Load</div>
               </div>
-
-              <h3 className={`text-xl font-bold mb-1 ${service.highlight ? 'text-white' : 'text-slate-900'}`}>
-                {service.title}
-              </h3>
-
-              <p className={`text-sm mb-4 ${service.highlight ? 'text-blue-100' : 'text-blue-600'}`}>
-                {service.subtitle}
-              </p>
-
-              <p className={`mb-6 leading-relaxed ${service.highlight ? 'text-blue-100' : 'text-slate-600'}`}>
-                {service.description}
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-3">
-                    <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${service.highlight ? 'text-blue-200' : 'text-green-500'
-                      }`} />
-                    <span className={`text-sm ${service.highlight ? 'text-white' : 'text-slate-600'}`}>
-                      {feature}
-                    </span>
+            </div>
+            <div className="service-content">
+              <div className="service-header-wrap">
+                <h3 className="service-title-large">{services[0].title}</h3>
+              </div>
+              <p className="service-desc-large">{services[0].desc}</p>
+              <ul className="service-features-large">
+                {services[0].features.map((f, j) => (
+                  <li key={j}>
+                    <CheckCircle size={22} className="feature-check" />
+                    <span>{f}</span>
                   </li>
                 ))}
               </ul>
-
-              <button
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className={`w-full py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 ${service.highlight
-                    ? 'bg-white text-blue-600 hover:bg-blue-50'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
-                  }`}
-              >
-                Konsultasi Gratis
-                <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
+          </div>
+
+          {/* Service 2: SEO */}
+          <div className="service-row seo-row reversed" data-aos="fade-up">
+            <div className="service-visual">
+              <div className="google-illustration">
+                <div className="search-bar-ui">
+                  <div className="search-dot" style={{ background: '#4285F4' }}></div>
+                  <div className="search-text-ui">klinik gigi jogja terdekat</div>
+                  <Search size={16} color="#9aa0a6" />
+                </div>
+                <div className="search-results-ui">
+                  <div className="result-item highlighted">
+                    <div className="res-meta">https://klinik-anda.id</div>
+                    <div className="res-title">Klinik Gigi Terbaik & Modern di Jogja - Klinik Gigi Anda</div>
+                    <div className="res-desc">Layanan behel, scaling, dan perawatan gigi profesional dengan dokter spesialis berpengalaman. Booking sekarang...</div>
+                    <div className="pop-indicator">#1</div>
+                  </div>
+                  <div className="result-item dimmed">
+                    <div className="res-meta">https://kompetitorgigi.com</div>
+                    <div className="res-title">Praktek Dokter Gigi Murah - Kompetitor A</div>
+                    <div className="res-desc">Kami melayani pembersihan karang gigi dan tambal gigi dengan harga terjangkau di pusat kota...</div>
+                  </div>
+                  <div className="result-item dimmed">
+                    <div className="res-meta">https://kliniklain.id</div>
+                    <div className="res-title">Ahli Pasang Behel - Klinik Gigi B</div>
+                    <div className="res-desc">Temukan berbagai promo menarik untuk pemasangan behel dan perawatan estetik gigi lainnya...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="service-content">
+              <div className="service-header-wrap">
+                <h3 className="service-title-large">{services[1].title}</h3>
+              </div>
+              <p className="service-desc-large">{services[1].desc}</p>
+              <ul className="service-features-large">
+                {services[1].features.map((f, j) => (
+                  <li key={j}>
+                    <CheckCircle size={22} className="feature-check" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="addons" data-aos="fade-up" data-aos-delay="200">
+          <span className="addons-label">Add-ons:</span>
+          {addons.map((a, i) => (
+            <span key={i} className="addon-tag">+ {a}</span>
           ))}
         </div>
       </div>
+
+      <style>{`
+        .services {
+          background: linear-gradient(135deg, #F4F7FF 0%, #E8F2FF 100%);
+          padding: 120px 0;
+          overflow: hidden;
+        }
+
+        .title-large {
+          font-size: 42px;
+          line-height: 1.2;
+          margin-bottom: 80px;
+        }
+
+        .services-list {
+          display: flex;
+          flex-direction: column;
+          gap: 100px;
+          margin-bottom: 80px;
+        }
+
+        .service-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: center;
+        }
+
+        .service-row.reversed {
+          direction: rtl;
+        }
+
+        .service-row.reversed .service-content {
+          direction: ltr;
+        }
+
+        /* Visual: Mockup */
+        .mockup-container {
+          position: relative;
+          width: 100%;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+
+        .mockup-img {
+          width: 100%;
+          height: auto;
+          filter: drop-shadow(0 32px 64px rgba(0,0,0,0.12));
+          border-radius: 12px;
+        }
+
+        .floating-badge {
+          position: absolute;
+          background: white;
+          padding: 10px 18px;
+          border-radius: 100px;
+          font-weight: 700;
+          font-size: 14px;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+          color: var(--accent);
+          border: 1px solid rgba(53, 158, 255, 0.1);
+        }
+
+        .badge-1 { top: 20%; left: -20px; animation: float 3s ease-in-out infinite; }
+        .badge-2 { bottom: 20%; right: -20px; animation: float 3s ease-in-out infinite 1.5s; }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+
+        /* Visual: Google Illustration */
+        .google-illustration {
+          background: white;
+          border-radius: 20px;
+          padding: 24px;
+          box-shadow: 0 32px 64px rgba(0,0,0,0.1);
+          border: 1px solid rgba(0,0,0,0.05);
+          width: 100%;
+          max-width: 520px;
+          margin: 0 auto;
+          position: relative;
+        }
+
+        .search-bar-ui {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 10px 20px;
+          border: 1px solid #dfe1e5;
+          border-radius: 100px;
+          margin-bottom: 24px;
+        }
+
+        .search-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .search-text-ui { flex: 1; font-size: 13px; color: #202124; font-weight: 500; }
+
+        .search-results-ui {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .result-item {
+          text-align: left;
+        }
+
+        .res-meta { font-size: 11px; color: #202124; margin-bottom: 2px; opacity: 0.7; }
+        .res-title { font-size: 16px; color: #1a0dab; font-weight: 500; margin-bottom: 4px; }
+        .res-desc { font-size: 13px; color: #4d5156; line-height: 1.4; }
+
+        .result-item.highlighted {
+          background: white;
+          padding: 20px;
+          border-radius: 16px;
+          box-shadow: 0 20px 40px rgba(53, 158, 255, 0.15);
+          border: 2.5px solid var(--accent);
+          transform: scale(1.08) translateZ(0);
+          z-index: 10;
+          position: relative;
+        }
+
+        .pop-indicator {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          background: var(--accent);
+          color: white;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 900;
+          font-size: 14px;
+          border: 3px solid white;
+        }
+
+        .result-item.dimmed {
+          opacity: 0.35;
+          filter: blur(0.5px);
+          padding: 0 20px;
+        }
+
+        /* Content */
+        .service-content {
+          text-align: left;
+        }
+
+        .service-header-wrap {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 24px;
+        }
+
+        .service-title-large {
+          font-size: 32px;
+          font-weight: 800;
+          color: #1a242d;
+          line-height: 1.2;
+          flex: 1;
+        }
+
+        .service-desc-large {
+          font-size: 18px;
+          color: #4a5568;
+          line-height: 1.7;
+          margin-bottom: 32px;
+          max-width: 540px;
+        }
+
+        .service-features-large {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .service-features-large li {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+          font-size: 18px;
+          color: #2d3748;
+          font-weight: 600;
+        }
+
+        .feature-check {
+          color: var(--accent);
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        .addons {
+          margin-top: 40px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+          justify-content: center;
+          padding: 32px;
+          background: rgba(255,255,255,0.8);
+          border-radius: 24px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          border: 1px solid rgba(255,255,255,1);
+        }
+
+        .addons-label {
+          font-weight: 700;
+          font-size: 16px;
+          color: #1a242d;
+        }
+
+        .addon-tag {
+          background: #EEF6FF;
+          color: var(--accent);
+          font-size: 14px;
+          font-weight: 700;
+          padding: 8px 20px;
+          border-radius: 50px;
+        }
+
+        @media (max-width: 1024px) {
+          .service-row { gap: 40px; }
+          .title-large { font-size: 36px; }
+          .service-title-large { font-size: 28px; }
+          .service-desc-large { font-size: 16px; }
+          .service-features-large li { font-size: 16px; }
+          .badge-1, .badge-2 { display: none; }
+        }
+
+        @media (max-width: 767px) {
+          .services-list { gap: 60px; }
+          .service-row {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 40px;
+          }
+          .service-row.reversed { direction: ltr; }
+          .service-content { text-align: center; padding: 0 10px; }
+          .service-header-wrap { flex-direction: column; gap: 16px; }
+          .service-desc-large { margin-left: auto; margin-right: auto; }
+          .service-features-large li { text-align: left; }
+          .title-large { font-size: 28px; margin-bottom: 40px; }
+          .mockup-container, .google-illustration { max-width: 100%; }
+        }
+      `}</style>
     </section>
   );
-};
-
-export default Services;
+}

@@ -1,24 +1,369 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ========================================
+   NAIKIN Design System — Premium Liquid Glass UI
+   ======================================== */
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-  }
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #0F1923;
+  background: #FAFCFF; /* Softer white with blue tint for better contrast */
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+}
+
+/* --- CSS Custom Properties --- */
+:root {
+  /* Colors */
+  --white: #FFFFFF;
+  --bg-soft: #F4F7FF;
+  --text-primary: #0A1118;
+  --accent: #359EFF;
+  --accent-hover: #1a8de8;
+  --accent-active: #0f74cc;
+  --accent-soft: #E0F0FF;
+  
+  /* Glass Variables */
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 16px 40px rgba(53, 158, 255, 0.12);
+  --glass-glow: inset 0 1px 0 rgba(255,255,255,0.9), inset 1px 0 0 rgba(255,255,255,0.3);
+
+  --muted: #59657A;
+  --border: #E2E8F0;
+  --footer-bg: #0F1923;
+  --whatsapp: #25D366;
+
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'Sora', sans-serif;
+
+  /* Spacing */
+  --section-pad-desktop: 120px;
+  --section-pad-mobile: 80px;
+  --max-width: 1200px;
+  --gutter: 24px;
+
+  /* Radii */
+  --radius-glass: 20px;
+  --radius-card: 24px;
+  --radius-btn: 50px;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 64px;
+  letter-spacing: -1px; 
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -0.2px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+p {
+  color: var(--muted);
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: inline-block;
+  background: var(--accent-soft);
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: var(--section-pad-desktop) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 72px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header h2 {
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  font-size: 19px;
+}
+
+/* --- Blob Backgrounds for True Glassmorphism --- */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+.blob-blue {
+  background: rgba(53, 158, 255, 0.4);
+}
+.blob-cyan {
+  background: rgba(0, 221, 255, 0.3);
+}
+.blob-purple {
+  background: rgba(189, 53, 255, 0.2);
+}
+
+/* --- Premium Liquid Glass Design System --- */
+.liquid-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-glass);
+  box-shadow: var(--glass-shadow), var(--glass-glow);
+}
+
+.liquid-glass-nav {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 32px rgba(53, 158, 255, 0.05);
+}
+
+.liquid-glass-nav.scrolled {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 32px rgba(53, 158, 255, 0.1), inset 0 -1px 0 rgba(255,255,255,0.5);
+}
+
+.liquid-glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-card);
+  box-shadow: 0 16px 40px rgba(53, 158, 255, 0.08), inset 0 1px 0 rgba(255,255,255,0.9), inset 1px 0 0 rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 2;
+}
+
+.liquid-glass-card:hover {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 60px rgba(53, 158, 255, 0.15), inset 0 1px 0 rgba(255,255,255,1), inset 1px 0 0 rgba(255,255,255,0.5);
+  transform: translateY(-6px);
+}
+
+/* Shimmer hover effect */
+.liquid-glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.8) 50%, transparent 70%);
+  transition: none;
+  pointer-events: none;
+  z-index: 10;
+  transform: skewX(-20deg);
+}
+
+.liquid-glass-card:hover::after {
+  animation: shimmer 800ms ease forwards;
+}
+
+@keyframes shimmer {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: var(--radius-btn);
+  padding: 16px 36px;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(53, 158, 255, 0.4), inset 0 2px 0 rgba(255,255,255,0.2);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(53, 158, 255, 0.5), inset 0 2px 0 rgba(255,255,255,0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(53, 158, 255, 0.3);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: var(--radius-btn);
+  padding: 14px 34px; /* Slightly less padding to account for border */
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  white-space: nowrap;
+}
+
+.btn-ghost:hover {
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+/* --- WhatsApp Float --- */
+.wa-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.4), inset 0 2px 0 rgba(255,255,255,0.2);
+  z-index: 999;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.wa-float:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 12px 40px rgba(37,211,102,0.5), inset 0 2px 0 rgba(255,255,255,0.2);
+}
+
+.wa-float svg {
+  width: 32px;
+  height: 32px;
+  fill: #FFFFFF;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.15); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.wa-float.visible {
+  animation: bounceIn 600ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.wa-float.hidden {
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+/* --- Animations --- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Counter number style */
+.stat-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1279px) {
+  h1 { font-size: 56px; }
+  .section { padding: 100px 0; }
+}
+
+@media (max-width: 767px) {
+  body { font-size: 16px; }
+  h1 { font-size: 40px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 22px; }
+  .section { padding: var(--section-pad-mobile) 0; }
+  .section-header { margin-bottom: 48px; }
+  .container { padding: 0 20px; }
+  .btn-primary, .btn-ghost { padding: 14px 28px; width: 100%; }
 }

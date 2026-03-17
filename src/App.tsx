@@ -1,42 +1,55 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { useEffect } from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
+import SocialProofBar from './components/SocialProofBar';
 import Services from './components/Services';
-import Contact from './components/Contact';
+import HowItWorks from './components/HowItWorks';
+import Portfolio from './components/Portfolio';
+import Pricing from './components/Pricing';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import CTAFinal from './components/CTAFinal';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 
-// Layout utama untuk halaman utama
-const MainLayout = ({ children }: { children: React.ReactNode }) => (
-  <>
-    <Header />
-    {children}
-    <Footer />
-  </>
-);
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <MainLayout>
-              <Hero />
-              <About />
-              <Portfolio />
-              <Services />
-              <Contact />
-            </MainLayout>
-          }
-        />
-        {/* Halaman contoh TIDAK menggunakan MainLayout */}
-      </Routes>
-    </Router>
-  );
+declare global {
+  interface Window {
+    AOS: {
+      init: (options?: Record<string, unknown>) => void;
+      refresh: () => void;
+    };
+  }
 }
 
-export default App;
+export default function App() {
+  useEffect(() => {
+    // Initialize AOS after mount
+    if (window.AOS) {
+      window.AOS.init({
+        duration: 400,
+        easing: 'ease-out',
+        once: true,
+        offset: 60,
+      });
+    }
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <SocialProofBar />
+        <Services />
+        <HowItWorks />
+        <Portfolio />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <CTAFinal />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
+    </>
+  );
+}
