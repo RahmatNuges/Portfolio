@@ -1,15 +1,6 @@
-import { Search, MessageCircle, TrendingUp } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Search, MessageCircle, Globe, Wrench, BarChart3 } from 'lucide-react';
 
 export default function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev === 0 ? 1 : 0));
-    }, 4500);
-    return () => clearInterval(timer);
-  }, []);
   return (
     <section className="hero" id="hero">
       {/* Background Blobs for True Glassmorphism Refraction */}
@@ -18,101 +9,62 @@ export default function Hero() {
       <div className="blob blob-purple hero-blob-3" />
 
       <div className="container hero-inner">
-        <div className="hero-content" data-aos="fade-up">
-          {/* Glass Badge */}
-          <div className="liquid-glass hero-badge">
-            <Search className="badge-icon text-accent" size={16} /> 97% pencarian produk dimulai dari Google
+
+
+        {/* Hero Visual (Image) placed ABOVE H1 with floating animation and no frame */}
+
+        {/* Glass Badge */}
+        <div className="liquid-glass hero-badge" data-aos="fade-up">
+          <Search className="badge-icon text-accent" size={16} /> Spesialis Website & SEO Klinik
+        </div>
+
+        {/* Hero Content (Headline, Sub-headline, CTAs, Trust Chips) placed BELOW Image */}
+        <div className="hero-content" data-aos="fade-up" data-aos-delay="100">
+          <h1>Website Klinik Premium yang bantu Tingkatkan Kepercayaan Calon Pasien <span className="text-gradient">Sebelum Booking</span></h1>
+
+          <p className="hero-sub">
+            Ubah pencarian Google menjadi kunjungan klinik dengan website premium & SEO lokal teroptimasi.
+          </p>
+
+          <div className="hero-visual" data-aos="fade-up" data-aos-delay="50">
+            <div className="hero-image-wrapper">
+              <div className="single-image-container">
+                <img
+                  src="/hero-image.webp"
+                  alt="Website Klinik Premium oleh NAIKIN"
+                  className="main-hero-img"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
           </div>
-
-          <h1>Bisnis Kamu Layak Ada di <span className="text-gradient">Halaman Pertama Google</span></h1>
-
-          <p className="hero-sub hero-sub-desktop">
-            Kami bantu bisnis kamu ditemukan oleh orang yang sudah siap beli, bukan sekadar punya website yang nganggur.
-          </p>
-          <p className="hero-sub hero-sub-mobile">
-            Naik peringkat, Naik Traffic, Naik Omzet
-          </p>
 
           <div className="hero-ctas">
             <a
-              href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20konsultasi%20gratis!"
+              href="#audit"
               className="btn-primary"
             >
-              <MessageCircle size={20} /> Chat WhatsApp Sekarang
+              <MessageCircle size={20} /> Minta Audit Klinik Gratis
             </a>
             <a href="#portofolio" className="btn-ghost">
-              Lihat Portofolio Kami
+              Lihat Portofolio Website Klinik
             </a>
           </div>
 
-          <div className="hero-proof liquid-glass-card">
-            <div className="proof-item">
-              <strong>75%</strong>
-              <span>Konsumen menilai bisnis dari websitenya</span>
+          {/* Trust Chips */}
+          <div className="hero-trust-chips">
+            <div className="trust-chip">
+              <Globe size={14} /> Website Klinik Premium
             </div>
-            <div className="proof-sep" />
-            <div className="proof-item">
-              <strong>92%</strong>
-              <span>Klik jatuh ke Halaman 1 Google</span>
+            <div className="trust-chip">
+              <Search size={14} /> SEO Lokal
             </div>
-            <div className="proof-sep" />
-            <div className="proof-item">
-              <strong>&lt; 1 Jam</strong>
-              <span>Respons kami</span>
+            <div className="trust-chip">
+              <MessageCircle size={14} /> CTA WhatsApp
             </div>
-          </div>
-        </div>
-
-        <div className="hero-visual" data-aos="fade-up" data-aos-delay="100">
-          <div className="hero-image-wrapper">
-            {/* Decorative elements around image */}
-            <div className="glass-card-floating float-1 liquid-glass">
-              <div className="fc-icon"><TrendingUp size={24} color="#359EFF" /></div>
-              <div className="fc-text">
-                <span className="fc-val">+240%</span>
-                <span className="fc-lbl">Traffic Growth</span>
-              </div>
-            </div>
-
-            <div className="glass-card-floating float-2 liquid-glass">
-              <div className="fc-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" className="google-icon">
-                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-              </div>
-              <div className="fc-text">
-                <span className="fc-val">Higher Rank</span>
-                <span className="fc-lbl">on Google Search</span>
-              </div>
-            </div>
-
-            <div className="slider-container">
-              <div className="slider-track" style={{ transform: `translateX(-${currentSlide * 50}%)` }}>
-                <div className="slide">
-                  <img
-                    src="/hero-section1.webp"
-                    alt="NAIKIN Dashboard Analytics"
-                    className="main-hero-img"
-                    loading="eager"
-                    fetchPriority="high"
-                    srcSet="/hero-section1.webp 900w"
-                    sizes="(max-width: 767px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="slide">
-                  <img
-                    src="/team-image.webp"
-                    alt="NAIKIN Team"
-                    className="main-hero-img"
-                    loading="lazy"
-                    srcSet="/team-image.webp 900w"
-                    sizes="(max-width: 767px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
+            <div className="trust-chip">
+              <Wrench size={14} /> Maintenance Bulanan
             </div>
           </div>
         </div>
@@ -125,8 +77,8 @@ export default function Hero() {
           align-items: center;
           position: relative;
           overflow: hidden;
-          background: linear-gradient(135deg, #FAFCFF 0%, #F0F6FF 100%);
-          padding-top: 100px;
+          background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 100%);
+          padding-top: 140px;
           padding-bottom: 80px;
         }
         
@@ -145,18 +97,23 @@ export default function Hero() {
         }
 
         .hero-inner {
-          display: grid;
-          grid-template-columns: 1.1fr 0.9fr;
-          gap: 60px;
+          display: flex;
+          flex-direction: column;
           align-items: center;
+          gap: 32px;
           position: relative;
           z-index: 10;
+          text-align: center;
+          width: 100%;
         }
 
         .hero-content {
           display: flex;
           flex-direction: column;
-          gap: 28px;
+          align-items: center;
+          gap: 20px;
+          max-width: 860px;
+          margin: 0 auto;
         }
 
         .hero-badge {
@@ -176,114 +133,85 @@ export default function Hero() {
         }
 
         .hero h1 {
-          max-width: 600px;
-          line-height: 1.1;
+          max-width: 820px;
+          font-size: 46px;
+          line-height: 1.25;
+          letter-spacing: -0.5px;
+          text-align: center;
         }
 
         .text-gradient {
-          background: linear-gradient(135deg, #359EFF 0%, #00DDFF 100%);
+          background: linear-gradient(135deg, #2563EB 0%, #60A5FA 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
         .hero-sub {
-          font-size: 19px;
-          line-height: 1.7;
-          max-width: 540px;
+          font-size: 18px;
+          line-height: 1.65;
+          max-width: 720px;
           color: var(--muted);
-        }
-
-        .hero-sub-mobile {
-          display: none;
+          text-align: center;
         }
 
         .hero-ctas {
           display: flex;
           gap: 16px;
           flex-wrap: wrap;
+          justify-content: center;
           margin-top: 8px;
         }
 
-        .hero-proof {
+        .hero-trust-chips {
           display: flex;
-          align-items: flex-start;
-          gap: 24px;
-          padding: 24px 32px;
-          margin-top: 24px;
-          width: 100%;
-          max-width: 600px;
+          flex-wrap: wrap;
+          gap: 12px;
+          justify-content: center;
+          margin-top: 8px;
         }
 
-        .proof-item {
-          display: flex;
-          flex-direction: column;
-          flex: 1; /* Make all items exactly the same width */
-        }
-
-        .proof-item strong {
-          font-family: var(--font-display);
-          font-weight: 800;
-          font-size: 20px;
-          color: var(--text-primary);
-          line-height: 1.2;
-          white-space: nowrap;
-          margin-bottom: 4px;
-        }
-
-        .proof-item span {
+        .trust-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          background: rgba(37, 99, 235, 0.08);
+          border: 1px solid rgba(37, 99, 235, 0.15);
+          border-radius: 100px;
+          padding: 6px 14px;
           font-size: 13px;
-          color: var(--muted);
-          font-weight: 500;
-          line-height: 1.4;
-        }
-
-        .proof-sep {
-          width: 1px;
-          height: auto;
-          align-self: stretch;
-          background: rgba(0,0,0,0.1);
-          margin-top: 8px;
-          margin-bottom: 8px;
+          font-weight: 600;
+          color: var(--accent);
+          white-space: nowrap;
         }
 
         .hero-visual {
           position: relative;
+          width: 100%;
+          max-width: 450px;
+          margin: 0 auto;
         }
 
         .hero-image-wrapper {
           position: relative;
           z-index: 10;
-        }
-
-        .slider-container {
           width: 100%;
-          aspect-ratio: 3 / 4;
-          border-radius: 24px;
-          overflow: hidden;
-          position: relative;
-          z-index: 5;
-          box-shadow: 0 32px 80px rgba(15, 25, 35, 0.15);
+          animation: float-main 8s ease-in-out infinite;
         }
 
-        .slider-track {
-          display: flex;
-          width: 200%;
-          height: 100%;
-          transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        .slide {
-          width: 50%;
-          height: 100%;
-          flex-shrink: 0;
+        .single-image-container {
+          width: 100%;
+          border: none;
+          background: transparent;
+          box-shadow: none;
+          overflow: visible;
         }
 
         .main-hero-img {
           width: 100%;
-          height: 100%;
-          object-fit: cover;
+          height: auto;
           display: block;
+          filter: drop-shadow(0 24px 48px rgba(37, 99, 235, 0.12));
         }
 
         .glass-card-floating {
@@ -293,25 +221,30 @@ export default function Hero() {
           align-items: center;
           gap: 16px;
           padding: 16px 24px;
-          /* Animation for floating effect */
-          animation: float 6s ease-in-out infinite;
+          animation: float-badge 6s ease-in-out infinite;
         }
 
         .float-1 {
           top: 10%;
-          left: -10%;
+          left: -20%;
           animation-delay: 0s;
         }
 
         .float-2 {
-          bottom: 15%;
-          right: -10%;
+          bottom: 10%;
+          right: -20%;
           animation-delay: -3s;
         }
 
-        @keyframes float {
+        @keyframes float-main {
           0% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0px); }
+        }
+
+        @keyframes float-badge {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-12px); }
           100% { transform: translateY(0px); }
         }
 
@@ -330,6 +263,7 @@ export default function Hero() {
         .fc-text {
           display: flex;
           flex-direction: column;
+          text-align: left;
         }
 
         .fc-val {
@@ -347,36 +281,46 @@ export default function Hero() {
         }
 
         @media (max-width: 1023px) {
-          .hero-inner {
-            grid-template-columns: 1fr;
-            gap: 48px;
+          .hero {
+            padding-top: 130px;
           }
-          .hero-content {
-            align-items: center;
-            text-align: center;
+          .hero-visual {
+            max-width: 400px;
           }
-          .hero h1 { max-width: 100%; }
-          .hero-sub { max-width: 100%; }
-          .hero-ctas { justify-content: center; width: 100%; }
-          .hero-proof { width: 100%; justify-content: space-between; padding: 20px; }
-          .glass-card-floating { display: none; } /* Hide floating cards on tablet/mobile for clean layout */
-          .main-hero-img { transform: none; box-shadow: none; }
-          .main-hero-img:hover { transform: none; }
+          .float-1 {
+            left: -10%;
+          }
+          .float-2 {
+            right: -10%;
+          }
+          .hero h1 {
+            font-size: 38px;
+          }
+          .hero-sub {
+            font-size: 16px;
+          }
         }
         
         @media (max-width: 767px) {
-          .hero-sub-desktop { display: none; }
-          .hero-sub-mobile { display: block; }
-          .hero { padding-top: 120px; min-height: auto; padding-bottom: 60px; }
+          .hero { padding-top: 130px; min-height: auto; padding-bottom: 60px; }
+          .hero-visual {
+            max-width: 280px;
+          }
           .hero-badge {
             font-size: 11.5px;
             padding: 6px 14px;
             white-space: nowrap;
           }
           .badge-icon { font-size: 14px; }
-          .hero-proof { flex-wrap: wrap; gap: 16px; justify-content: center; padding: 16px; }
-          .proof-sep { display: none; }
-          .proof-item { width: 45%; align-items: center; }
+          .hero h1 {
+            font-size: 28px;
+            line-height: 1.35;
+          }
+          .hero-trust-chips { gap: 8px; }
+          .trust-chip { font-size: 11px; padding: 5px 10px; }
+          .glass-card-floating {
+            display: none;
+          }
         }
       `}</style>
     </section>

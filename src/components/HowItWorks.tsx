@@ -1,51 +1,74 @@
-import { MessageSquare, ClipboardList, Wrench, Rocket } from 'lucide-react';
+import { Search, FileText, CreditCard, ClipboardList, Code, Eye, Rocket, BarChart3 } from 'lucide-react';
 
 export default function HowItWorks() {
   const steps = [
     {
       num: '01',
-      icon: <MessageSquare size={24} />,
-      title: 'Konsultasi Gratis',
-      desc: 'Ceritakan bisnis kamu dalam 15 menit. Kami langsung kasih tahu apa yang perlu diperbaiki, gratis, tanpa sales pitch.',
+      icon: <Search size={24} />,
+      title: 'Audit & Konsultasi Awal',
+      desc: 'Kami cek kondisi digital klinik Anda: website, Google Maps, Instagram, layanan, dan kompetitor lokal. Gratis, tanpa paksaan.',
     },
     {
       num: '02',
-      icon: <ClipboardList size={24} />,
-      title: 'Proposal & Strategi',
-      desc: 'Kami kirim proposal lengkap: scope pekerjaan, timeline, dan estimasi hasil yang bisa kamu harapkan.',
+      icon: <FileText size={24} />,
+      title: 'Rekomendasi Struktur',
+      desc: 'Kami susun halaman yang dibutuhkan berdasarkan kondisi dan kebutuhan klinik Anda.',
     },
     {
       num: '03',
-      icon: <Wrench size={24} />,
-      title: 'Pengerjaan Transparan',
-      desc: 'Tim kami bekerja dengan update rutin. Kamu selalu tahu progress-nya, tidak ada yang disembunyikan.',
+      icon: <CreditCard size={24} />,
+      title: 'Proposal & DP',
+      desc: 'Setelah scope jelas, kami kirim proposal, timeline, dan invoice DP 50%.',
     },
     {
       num: '04',
+      icon: <ClipboardList size={24} />,
+      title: 'Brief & Pengumpulan Aset',
+      desc: 'Anda mengisi form brief singkat (~10 menit). Urusan copywriting dan kurasi visual dikerjakan tim NAIKIN.',
+    },
+    {
+      num: '05',
+      icon: <Code size={24} />,
+      title: 'Desain & Development',
+      desc: 'Website dibuat mobile-friendly, profesional, dan disiapkan dengan SEO dasar.',
+    },
+    {
+      num: '06',
+      icon: <Eye size={24} />,
+      title: 'Review & Revisi',
+      desc: 'Anda cek hasil website, lalu kami lakukan revisi sesuai scope paket.',
+    },
+    {
+      num: '07',
       icon: <Rocket size={24} />,
-      title: 'Launch & Pantau',
-      desc: 'Website live, SEO jalan. Kami terus pantau performa dan laporkan hasilnya setiap bulan.',
+      title: 'Pelunasan & Launch',
+      desc: 'Setelah disetujui 100%, pelunasan 50% sisa dan website dipublikasikan.',
+    },
+    {
+      num: '08',
+      icon: <BarChart3 size={24} />,
+      title: 'Maintenance & SEO',
+      desc: 'Kami bantu update, monitoring, optimasi konten, dan laporan bulanan.',
     },
   ];
 
   return (
-    <section className="how-it-works section" id="cara-kerja">
+    <section className="how-it-works section" id="proses">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <p className="section-label">PROSESNYA SEDERHANA</p>
-          <h2>Dari Chat Pertama ke Website Live</h2>
+          <p className="section-label">PROSES KERJA</p>
+          <h2>Proses Kerja Jelas dari Audit sampai Website Launch</h2>
         </div>
 
         <div className="steps-grid">
           {steps.map((s, i) => (
-            <div key={i} className="step-item" data-aos="fade-up" data-aos-delay={i * 100}>
+            <div key={i} className="step-item" data-aos="fade-up" data-aos-delay={i * 60}>
               <div className="step-num-wrap">
                 <span className="step-num-bg">{s.num}</span>
                 <div className="step-pill liquid-glass">
                   <span className="step-emoji">{s.icon}</span>
                 </div>
               </div>
-              {i < steps.length - 1 && <div className="step-connector" />}
               <h3 className="step-title">{s.title}</h3>
               <p className="step-desc">{s.desc}</p>
             </div>
@@ -55,7 +78,7 @@ export default function HowItWorks() {
 
       <style>{`
         .how-it-works {
-          background: var(--white);
+          background: linear-gradient(180deg, #FFFFFF 0%, #EFF6FF 100%);
         }
         .steps-grid {
           display: grid;
@@ -81,7 +104,7 @@ export default function HowItWorks() {
           font-family: var(--font-display);
           font-weight: 800;
           font-size: 72px;
-          color: rgba(53, 158, 255, 0.08);
+          color: rgba(37, 99, 235, 0.08);
           user-select: none;
           pointer-events: none;
           line-height: 1;
@@ -98,18 +121,11 @@ export default function HowItWorks() {
         }
         .step-emoji {
           font-size: 24px;
-        }
-        .step-connector {
-          position: absolute;
-          top: 40px;
-          left: calc(50% + 36px);
-          width: calc(100% - 36px);
-          border-top: 2px dashed rgba(53, 158, 255, 0.2);
-          z-index: 0;
+          color: var(--accent);
         }
         .step-title {
           margin-bottom: 8px;
-          font-size: 18px;
+          font-size: 17px;
         }
         .step-desc {
           font-size: 14px;
@@ -119,7 +135,6 @@ export default function HowItWorks() {
 
         @media (max-width: 1023px) {
           .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-          .step-connector { display: none; }
         }
         @media (max-width: 767px) {
           .steps-grid { grid-template-columns: 1fr; gap: 36px; }

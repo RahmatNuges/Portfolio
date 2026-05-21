@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import SocialProofBar from './components/SocialProofBar';
+import ProblemSection from './components/ProblemSection';
+import WhyWebsite from './components/WhyWebsite';
 import Services from './components/Services';
-import HowItWorks from './components/HowItWorks';
 import Portfolio from './components/Portfolio';
 import Pricing from './components/Pricing';
-import Testimonials from './components/Testimonials';
+import HowItWorks from './components/HowItWorks';
+import AuditSection from './components/AuditSection';
+import ForWhoSection from './components/ForWhoSection';
 import FAQ from './components/FAQ';
 import CTAFinal from './components/CTAFinal';
 import Footer from './components/Footer';
@@ -39,12 +41,14 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <SocialProofBar />
+        <ProblemSection />
+        <WhyWebsite />
         <Services />
-        <HowItWorks />
         <Portfolio />
         <Pricing />
-        <Testimonials />
+        <HowItWorks />
+        <AuditSection />
+        <ForWhoSection />
         <FAQ />
         <CTAFinal />
       </main>

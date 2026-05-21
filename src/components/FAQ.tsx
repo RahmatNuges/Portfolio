@@ -4,28 +4,36 @@ import { ChevronDown } from 'lucide-react';
 export default function FAQ() {
   const faqs = [
     {
-      q: 'Berapa lama proses pembuatan website?',
-      a: 'Untuk website profil standar, biasanya 7–14 hari kerja setelah briefing selesai. Website yang lebih kompleks bisa 3–4 minggu. Kami selalu kasih timeline yang jelas di awal, tidak ada kejutan di tengah jalan.',
+      q: 'Apakah SEO langsung ranking 1?',
+      a: 'Tidak ada SEO yang bisa menjamin ranking 1 secara instan. Yang kami bantu adalah membangun pondasi website agar lebih siap bersaing secara organik di pencarian lokal.',
     },
     {
-      q: 'Apakah hasil SEO bisa dijamin?',
-      a: 'Tidak ada yang bisa jamin posisi pasti di Google, siapapun yang bilang bisa, hati-hati. Yang kami jamin adalah: strategi yang benar, eksekusi yang konsisten, dan laporan yang transparan. Rata-rata klien kami melihat peningkatan signifikan dalam 3–6 bulan.',
+      q: 'Berapa lama pengerjaan website?',
+      a: 'Tergantung paket dan kelengkapan aset. Setelah DP dan brief lengkap, kami berikan timeline pengerjaan yang jelas.',
     },
     {
-      q: 'Saya tidak punya konten/foto, apakah bisa tetap dikerjakan?',
-      a: 'Bisa! Kami bantu dari nol. NAIKIN punya tim copywriter dan gambar yang dibantu AI yang bisa menyiapkan konten awal. Kamu tinggal review dan approve.',
+      q: 'Kami tidak punya staf IT. Siapa yang urus website-nya?',
+      a: 'Melalui layanan SEO & Maintenance bulanan, tim NAIKIN bertindak sebagai tim IT eksternal klinik Anda. Semua update, perbaikan, dan optimasi ditangani kami.',
     },
     {
-      q: 'Apakah biaya sudah termasuk hosting dan domain?',
-      a: 'Ya, semua paket kami sudah all-in. Kamu sudah dapat domain (.com/.id) dan hosting berkecepatan tinggi untuk tahun pertama. Jadi kamu tinggal terima beres tanpa pusing biaya tambahan yang tersembunyi.',
+      q: 'Kenapa SEO bulanan Rp1,8jt itu penting?',
+      a: 'Peringkat Google bersifat dinamis. Kompetitor Anda juga berinvestasi di digital. Biaya bulanan digunakan untuk produksi konten, monitoring, dan memastikan klinik Anda tetap direkomendasikan Google.',
     },
     {
-      q: 'Bagaimana sistem pembayarannya?',
-      a: 'DP 50% di awal, 50% setelah website selesai dan kamu approve. Untuk paket SEO bulanan, pembayaran di awal setiap bulan. Transfer bank atau e-wallet tersedia.',
+      q: 'Bisa pakai domain lama?',
+      a: 'Bisa, selama akses domain/hosting tersedia. Jika belum punya, kami bantu arahkan.',
     },
     {
-      q: 'Saya berada di luar DI Yogyakarta, apakah NAIKIN bisa membantu?',
-      a: 'Sangat bisa! Semua komunikasi bisa via WhatsApp, Zoom, atau email. Kami sudah handle klien dari Sabang sampai Merauke, lokasi bukan hambatan.',
+      q: 'Apa bedanya paket Premium dan Premium Plus?',
+      a: 'Premium cocok untuk klinik yang ingin mulai punya website profesional (5 halaman). Premium Plus cocok untuk klinik dengan banyak layanan yang butuh halaman per-treatment dan SEO lebih serius (hingga lebih dari 12 halaman).',
+    },
+    {
+      q: 'Bisa terhubung ke WhatsApp?',
+      a: 'Bisa. Semua website kami arahkan ke WhatsApp klinik agar calon pasien lebih mudah bertanya atau booking.',
+    },
+    {
+      q: 'Apakah bisa revisi?',
+      a: 'Bisa. Revisi dilakukan sesuai scope paket. Paket Premium Plus mendapat unlimited revisi.',
     },
   ];
 
@@ -39,6 +47,7 @@ export default function FAQ() {
     <section className="faq section" id="faq">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
+          <p className="section-label">FAQ</p>
           <h2>Pertanyaan yang Sering Ditanyakan</h2>
         </div>
 
@@ -66,7 +75,7 @@ export default function FAQ() {
 
       <style>{`
         .faq {
-          background: var(--white);
+          background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 100%);
         }
         .faq-list {
           max-width: 760px;

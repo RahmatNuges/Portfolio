@@ -4,21 +4,17 @@ export default function Portfolio() {
   const projects = [
     {
       title: 'Renie Dent',
-      type: 'Klinik Gigi',
+      type: 'Klinik Gigi Anak — Banjarmasin',
       image: '/portfolio/renie-dent.webp',
-      link: 'https://reniedent.id/'
-    },
-    {
-      title: 'Arsiteku',
-      type: 'Portfolio Project',
-      image: '/portfolio/Arsitek.webp',
-      link: 'https://arsiteku.vercel.app/'
+      link: 'https://reniedent.id/',
+      desc: 'Website klinik gigi anak yang dirancang mobile-friendly, mengedepankan atmosfer ramah anak, dengan struktur layanan informatif dan SEO lokal.',
     },
     {
       title: 'Toto Dental',
-      type: 'Klinik Gigi',
+      type: 'Klinik Gigi Premium',
       image: '/portfolio/klinik_gigi.webp',
-      link: 'https://klinikgigi-three.vercel.app/'
+      link: 'https://klinikgigi-three.vercel.app/',
+      desc: 'Website klinik gigi premium dengan standar desain dan struktur website klinik gigi modern.',
     },
   ];
 
@@ -26,8 +22,8 @@ export default function Portfolio() {
     <section className="portfolio section" id="portofolio">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <p className="section-label">PORTOFOLIO</p>
-          <h2>Hasil Nyata Klien Kami</h2>
+          <p className="section-label">PORTFOLIO</p>
+          <h2>Contoh Website Klinik yang Sudah Kami Kerjakan</h2>
         </div>
 
         <div className="portfolio-grid">
@@ -60,6 +56,7 @@ export default function Portfolio() {
                 <div className="info-main">
                   <span className="info-label">{p.type.toUpperCase()}</span>
                   <h3 className="info-title">{p.title}</h3>
+                  <p className="info-desc">{p.desc}</p>
                 </div>
                 <div className="portfolio-btn">
                   Lihat Website <ArrowUpRight size={16} />
@@ -68,16 +65,11 @@ export default function Portfolio() {
             </a>
           ))}
         </div>
-
-        <div className="portfolio-footer" data-aos="fade-up">
-          <p className="footer-note">Lebih dari 150+ bisnis telah bertumbuh bersama kami</p>
-          <a href="#" className="btn-outline">Lihat Selengkapnya</a>
-        </div>
       </div>
 
       <style>{`
         .portfolio {
-          background: #0F1923;
+          background: #0F172A;
           padding: 100px 0;
         }
 
@@ -88,11 +80,10 @@ export default function Portfolio() {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 32px;
-          margin-bottom: 60px;
         }
 
         .portfolio-card {
-          background: #1A242D;
+          background: #131D31;
           border-radius: 24px;
           padding: 16px;
           transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -105,8 +96,8 @@ export default function Portfolio() {
 
         .portfolio-card:hover {
           transform: translateY(-10px);
-          background: #232D37;
-          border-color: rgba(53, 158, 255, 0.3);
+          background: #1E293B;
+          border-color: rgba(37, 99, 235, 0.3);
           box-shadow: 0 32px 64px rgba(0, 0, 0, 0.4);
         }
 
@@ -167,7 +158,7 @@ export default function Portfolio() {
           padding: 4px 8px 8px;
           display: flex;
           flex-direction: row;
-          align-items: center;
+          align-items: flex-start;
           justify-content: space-between;
           gap: 16px;
         }
@@ -192,6 +183,13 @@ export default function Portfolio() {
           font-weight: 700;
           color: white;
           line-height: 1.2;
+          margin-bottom: 8px;
+        }
+
+        .info-desc {
+          font-size: 13px;
+          color: rgba(255, 255, 255, 0.5);
+          line-height: 1.5;
         }
 
         .portfolio-btn {
@@ -207,40 +205,13 @@ export default function Portfolio() {
           font-weight: 700;
           transition: all 0.3s ease;
           white-space: nowrap;
+          flex-shrink: 0;
+          margin-top: 4px;
         }
 
         .portfolio-card:hover .portfolio-btn {
           background: var(--accent);
           color: white;
-        }
-
-        .portfolio-footer {
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 24px;
-        }
-
-        .footer-note {
-          color: rgba(255, 255, 255, 0.4);
-          font-size: 15px;
-        }
-
-        .btn-outline {
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          color: white;
-          padding: 14px 32px;
-          border-radius: 100px;
-          font-weight: 600;
-          transition: all 0.3s ease;
-          display: inline-block;
-        }
-
-        .btn-outline:hover {
-          background: white;
-          color: black;
-          border-color: white;
         }
 
         @media (max-width: 991px) {
@@ -252,9 +223,9 @@ export default function Portfolio() {
         @media (max-width: 767px) {
           .portfolio-grid { grid-template-columns: 1fr; }
           .portfolio { padding: 60px 0; }
-          .portfolio-info { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+          .portfolio-info { flex-direction: column; align-items: stretch; gap: 12px; }
           .info-title { font-size: 18px; }
-          .portfolio-btn { width: auto; font-size: 12px; padding: 8px 16px; }
+          .portfolio-btn { width: 100%; font-size: 12px; padding: 10px 16px; }
         }
       `}</style>
     </section>

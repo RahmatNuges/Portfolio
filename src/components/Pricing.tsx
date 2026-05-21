@@ -1,50 +1,40 @@
-import { CheckCircle, X } from 'lucide-react';
+import { CheckCircle, X, Star } from 'lucide-react';
 
 export default function Pricing() {
   const plans = [
     {
       name: 'Premium',
       price: 'Rp 4.700.000',
-      desc: 'Bisnis kamu belum punya website? Mulai dari sini.',
+      desc: 'Cocok untuk klinik yang ingin mulai punya website profesional pertama dengan struktur yang rapi dan siap membangun trust calon pasien.',
       features: [
-        { text: 'Website profil 5 halaman', included: true },
-        { text: 'Desain responsif mobile', included: true },
-        { text: 'Domain & hosting 1 tahun', included: true },
-        { text: 'Formulir kontak & WhatsApp', included: true },
-        { text: 'Revisi 2x', included: true },
-        { text: 'SEO tidak termasuk', included: false },
+        { text: '5 halaman utama (Home, Profil, Layanan, Galeri, Kontak)', included: true },
+        { text: 'Desain premium, responsif mobile, tema medis profesional', included: true },
+        { text: 'Tombol WhatsApp terintegrasi', included: true },
+        { text: 'Basic SEO on-page setup', included: true },
+        { text: 'Google Maps embed lokasi klinik', included: true },
+        { text: '2x revisi mayor', included: true },
+        { text: 'Free hosting & domain (.com/.id) tahun pertama', included: true },
+        { text: 'Riset kata kunci & Google Business Profile', included: false },
       ],
-      cta: 'Mulai dengan Premium',
+      cta: 'Pilih Paket Premium',
       popular: false,
     },
     {
-      name: 'Premium+',
-      price: 'Rp 11.500.000',
-      desc: 'Sudah pernah punya website tapi tidak ada Traffic dari Google? Ini cocok buat anda.',
+      name: 'Premium Plus',
+      price: 'Rp 9.700.000',
+      desc: 'Cocok untuk klinik dengan banyak layanan yang ingin tampil lebih premium dan membangun pondasi SEO lokal yang lebih serius.',
       features: [
-        { text: 'Semua fitur paket Premium', included: true },
-        { text: 'Website profesional 8-12 halaman', included: true },
-        { text: 'SEO on-page lengkap', included: true },
-        { text: 'Riset keyword 20 kata kunci', included: true },
-        { text: 'Setup Google Business Profile', included: true },
-        { text: 'Integrasi analytics & Google Search Console', included: true },
-        { text: 'Revisi unlimited', included: true },
-        { text: 'Free Paket Maintanance 3 bulan', included: true },
+        { text: 'Hingga lebih dari 12 halaman spesialistik per-treatment', included: true },
+        { text: 'Custom brand identity & UI/UX teroptimasi tinggi', included: true },
+        { text: 'Form reservasi pintar + WhatsApp call routing', included: true },
+        { text: 'Riset 20 kata kunci lokal + Google Analytics & Search Console', included: true },
+        { text: 'Full setup & optimasi Google Business Profile', included: true },
+        { text: 'Halaman dokter/tim & halaman lokasi', included: true },
+        { text: 'Unlimited revisi sampai sesuai standar', included: true },
+        { text: 'GRATIS maintenance & update teknis 3 bulan pertama', included: true },
       ],
-      cta: 'Mulai dengan Premium+',
-      popular: false,
-    },
-    {
-      name: 'Custom',
-      price: 'Based on Specification',
-      desc: 'Ingin website dengan fitur custom? Diskusi dengan kami.',
-      features: [
-        { text: 'Website Booking otomatis', included: true },
-        { text: 'Website dengan Integrasi AI', included: true },
-        { text: 'Website dengan Fitur E-commerce', included: true },
-      ],
-      cta: 'Diskusi Kebutuhan Kamu',
-      popular: false,
+      cta: 'Pilih Paket Premium Plus',
+      popular: true,
     },
   ];
 
@@ -52,8 +42,11 @@ export default function Pricing() {
     <section className="pricing section" id="harga">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <p className="section-label">TRANSPARAN SOAL HARGA</p>
-          <h2>Pilih Paket yang Pas untuk Bisnis Kamu</h2>
+          <p className="section-label">PAKET WEBSITE KLINIK</p>
+          <h2>Pilih Paket yang Tepat untuk Klinik Anda</h2>
+          <p className="pricing-intro">
+            Tidak semua klinik butuh paket terbesar. Kami bantu rekomendasikan paket berdasarkan kondisi klinik, jumlah layanan, target lokasi, dan kebutuhan Anda.
+          </p>
         </div>
 
         <div className="pricing-grid">
@@ -65,7 +58,7 @@ export default function Pricing() {
               data-aos-delay={i * 100}
             >
               {p.popular && (
-                <div className="pricing-badge">⭐ Paling Populer</div>
+                <div className="pricing-badge"><Star size={14} fill="#2563EB" /> Terpopuler</div>
               )}
               <h3 className="pricing-name">Paket {p.name}</h3>
               <div className="pricing-price">{p.price}</div>
@@ -91,21 +84,48 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="pricing-note" data-aos="fade-up">
-          Semua harga belum termasuk PPN. Paket bisa dikustomisasi sesuai kebutuhan. Hubungi kami untuk konsultasi gratis.
-        </p>
+        {/* SEO Maintenance Add-on */}
+        <div className="maintenance-addon" data-aos="fade-up">
+          <div className="maintenance-inner liquid-glass-card">
+            <div className="maintenance-info">
+              <h3>SEO & Maintenance Bulanan</h3>
+              <div className="maintenance-price">Rp 1.800.000<span>/bulan</span></div>
+              <p>Website adalah pondasi. SEO dan maintenance membantu website tetap aktif, terawat, dan terus dioptimasi secara berkelanjutan.</p>
+            </div>
+            <ul className="maintenance-features">
+              <li><CheckCircle size={16} className="pricing-check" /> Maintenance website & keamanan</li>
+              <li><CheckCircle size={16} className="pricing-check" /> Konten edukasi medis bulanan</li>
+              <li><CheckCircle size={16} className="pricing-check" /> Monitoring performa & ranking</li>
+              <li><CheckCircle size={16} className="pricing-check" /> Laporan bulanan transparan</li>
+              <li><CheckCircle size={16} className="pricing-check" /> Perbaikan teknis sesuai scope</li>
+            </ul>
+            <a 
+              href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20tanya%20tentang%20SEO%20bulanan" 
+              className="btn-ghost maintenance-btn"
+            >Tanya Tentang SEO Bulanan</a>
+          </div>
+        </div>
       </div>
 
       <style>{`
         .pricing {
           background: var(--white);
         }
+        .pricing-intro {
+          font-size: 16px;
+          max-width: 600px;
+          margin: 0 auto;
+          text-align: center;
+        }
         .pricing-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 28px;
-          margin-bottom: 32px;
+          margin-bottom: 48px;
           align-items: start;
+          max-width: 880px;
+          margin-left: auto;
+          margin-right: auto;
         }
         .pricing-card {
           padding: 40px 32px;
@@ -115,9 +135,9 @@ export default function Pricing() {
           z-index: 0;
         }
         .pricing-popular {
-          border: 2px solid rgba(53,158,255,0.50) !important;
+          border: 2px solid rgba(37,99,235,0.50) !important;
           box-shadow:
-            0 16px 48px rgba(53,158,255,0.20),
+            0 16px 48px rgba(37,99,235,0.20),
             0 2px 0 rgba(255,255,255,0.95) inset !important;
         }
         .pricing-badge {
@@ -127,7 +147,7 @@ export default function Pricing() {
           background: rgba(255,255,255,0.65);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(53,158,255,0.25);
+          border: 1px solid rgba(37,99,235,0.25);
           border-radius: 50px;
           padding: 6px 16px;
           font-size: 13px;
@@ -156,7 +176,7 @@ export default function Pricing() {
           font-size: 14px;
           color: var(--muted);
           margin-bottom: 28px;
-          font-style: italic;
+          line-height: 1.6;
         }
         .pricing-features {
           display: flex;
@@ -185,19 +205,76 @@ export default function Pricing() {
           color: #D1D5DB;
           flex-shrink: 0;
         }
-        .pricing-cta {
+        .pricing-btn {
           text-align: center;
           justify-content: center;
           width: 100%;
         }
-        .pricing-note {
-          text-align: center;
-          font-size: 13px;
+        .btn-outline {
+          background: transparent !important;
+          border: 2px solid var(--accent) !important;
+          color: var(--accent) !important;
+          box-shadow: none !important;
+        }
+        .btn-outline:hover {
+          background: var(--accent-soft) !important;
+        }
+
+        /* Maintenance Addon */
+        .maintenance-addon {
+          max-width: 880px;
+          margin: 0 auto;
+        }
+        .maintenance-inner {
+          display: grid;
+          grid-template-columns: 1fr 1fr auto;
+          gap: 40px;
+          align-items: center;
+          padding: 40px !important;
+        }
+        .maintenance-info h3 {
+          font-size: 22px;
+          margin-bottom: 8px;
+        }
+        .maintenance-price {
+          font-family: var(--font-display);
+          font-weight: 800;
+          font-size: 28px;
+          color: var(--accent);
+          margin-bottom: 12px;
+        }
+        .maintenance-price span {
+          font-size: 16px;
+          font-weight: 500;
           color: var(--muted);
+        }
+        .maintenance-info p {
+          font-size: 14px;
+          color: var(--muted);
+          line-height: 1.6;
+        }
+        .maintenance-features {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .maintenance-features li {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--text-primary);
+        }
+        .maintenance-btn {
+          white-space: nowrap;
         }
 
         @media (max-width: 1023px) {
-          .pricing-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+          .pricing-grid { grid-template-columns: 1fr; max-width: 440px; }
+          .maintenance-inner { grid-template-columns: 1fr; text-align: center; }
+          .maintenance-features { align-items: center; }
+          .maintenance-btn { width: 100%; justify-content: center; }
         }
       `}</style>
     </section>

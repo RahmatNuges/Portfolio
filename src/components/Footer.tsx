@@ -8,17 +8,11 @@ export default function Footer() {
             <a href="#" className="footer-logo">
               <img src="/LogoFooter.svg" alt="NAIKIN" className="footer-logo-img" />
             </a>
-            <p className="footer-tagline">Naik peringkat. Naik traffic. Naik omzet.</p>
+            <p className="footer-tagline">Website Premium & SEO untuk Klinik Gigi dan Klinik Kecantikan</p>
             <div className="footer-socials">
               <a href="https://instagram.com/naikinofficial" aria-label="Instagram" className="footer-social-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               </a>
-              {/* <a href="#" aria-label="LinkedIn" className="footer-social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="#" aria-label="TikTok" className="footer-social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
-              </a> */}
             </div>
           </div>
 
@@ -26,21 +20,21 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-heading">Layanan</h4>
             <ul className="footer-links">
-              <li><a href="#layanan">Pembuatan Website</a></li>
-              <li><a href="#layanan">SEO On-Page</a></li>
-              <li><a href="#layanan">SEO Off-Page</a></li>
-              <li><a href="#kontak">Konsultasi Gratis</a></li>
+              <li><a href="#layanan">Website Klinik Premium</a></li>
+              <li><a href="#layanan">SEO & Maintenance</a></li>
+              <li><a href="#audit">Audit Digital Klinik</a></li>
+              <li><a href="#harga">Paket Harga</a></li>
             </ul>
           </div>
 
-          {/* Column 3: Perusahaan */}
+          {/* Column 3: Navigasi */}
           <div className="footer-col">
-            <h4 className="footer-heading">Perusahaan</h4>
+            <h4 className="footer-heading">Navigasi</h4>
             <ul className="footer-links">
-              <li><a href="#">Tentang Kami</a></li>
               <li><a href="#portofolio">Portofolio</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Karir</a></li>
+              <li><a href="#proses">Proses Kerja</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#kontak">Kontak</a></li>
             </ul>
           </div>
 
@@ -56,13 +50,13 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 NAIKIN. Semua hak dilindungi.</p>
+          <p>© 2026 NAIKIN. Spesialis Website & SEO Klinik. Semua hak dilindungi.</p>
         </div>
       </div>
 
       <style>{`
         .site-footer {
-          background: #0F1923;
+          background: #0F172A;
           padding: 80px 0 0;
         }
         .footer-grid {

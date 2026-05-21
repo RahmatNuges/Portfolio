@@ -10,23 +10,31 @@ export default function CTAFinal() {
 
       <div className="container cta-final-inner">
         <div className="cta-final-badge" data-aos="fade-up" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-          <MessageCircle size={16} /> Konsultasi 100% Gratis
+          <MessageCircle size={16} /> Audit Gratis
         </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="50">Siap Naik ke Level Berikutnya?</h2>
+        <h2 data-aos="fade-up" data-aos-delay="50">Siap Naikin Level Digital Klinik Anda?</h2>
 
         <p className="cta-final-sub" data-aos="fade-up" data-aos-delay="100">
-          Ngobrol 15 menit. Kami tunjukkan kenapa bisnis kamu belum muncul di Google, dan apa yang harus dilakukan. Gratis. Tanpa kewajiban apapun.
+          Mulai dari audit gratis. Kami bantu cek kondisi digital klinik Anda dan rekomendasikan langkah paling tepat untuk website dan SEO klinik Anda.
         </p>
 
-        <a
-          href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20konsultasi%20gratis!"
-          className="btn-primary"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          <MessageCircle size={18} /> Chat di WhatsApp Sekarang
-        </a>
+        <div className="cta-final-buttons" data-aos="fade-up" data-aos-delay="150">
+          <a
+            href="#audit"
+            className="btn-primary cta-audit-btn"
+          >
+            Audit Klinik Saya Gratis
+          </a>
+          <a
+            href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20konsultasi%20tentang%20website%20klinik"
+            className="cta-wa-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle size={18} /> Chat WhatsApp NAIKIN
+          </a>
+        </div>
 
         <div className="cta-bottom" data-aos="fade-up" data-aos-delay="200">
           <span>📍 DI Yogyakarta</span>
@@ -38,7 +46,7 @@ export default function CTAFinal() {
 
       <style>{`
         .cta-final {
-          background: radial-gradient(ellipse at 50% 0%, #5FB3FF 0%, #359EFF 60%);
+          background: radial-gradient(ellipse at 50% 0%, #60A5FA 0%, #2563EB 70%);
           padding: 100px 0;
           position: relative;
           overflow: hidden;
@@ -91,24 +99,33 @@ export default function CTAFinal() {
           line-height: 1.7;
           margin-bottom: 36px;
         }
-        .cta-final-btn {
+        .cta-final-buttons {
+          display: flex;
+          gap: 16px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .cta-audit-btn {
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+        }
+        .cta-wa-btn {
           display: inline-flex;
           align-items: center;
           gap: 8px;
           background: rgba(255,255,255,0.90);
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
-          color: #359EFF;
+          color: #2563EB;
           font-family: var(--font-body);
           font-weight: 700;
-          font-size: 17px;
+          font-size: 16px;
           border-radius: 50px;
-          padding: 16px 40px;
+          padding: 16px 36px;
           transition: all 180ms ease;
         }
-        .cta-final-btn:hover {
+        .cta-wa-btn:hover {
           background: rgba(255,255,255,1);
-          transform: scale(1.02);
+          transform: translateY(-2px);
         }
         .cta-bottom {
           margin-top: 40px;
@@ -141,7 +158,9 @@ export default function CTAFinal() {
           .cta-final { padding: 72px 0; }
           .cta-final h2 { font-size: 32px; }
           .cta-final-sub { font-size: 16px; }
-          .cta-final-btn { font-size: 15px; padding: 14px 32px; }
+          .cta-wa-btn { font-size: 15px; padding: 14px 28px; }
+          .cta-final-buttons { flex-direction: column; width: 100%; padding: 0 20px; }
+          .cta-final-buttons a { width: 100%; text-align: center; justify-content: center; }
         }
       `}</style>
     </section>

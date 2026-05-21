@@ -23,6 +23,7 @@ export default function Navbar() {
     { label: 'Layanan', href: '#layanan' },
     { label: 'Portofolio', href: '#portofolio' },
     { label: 'Harga', href: '#harga' },
+    { label: 'Proses', href: '#proses' },
     { label: 'FAQ', href: '#faq' },
   ];
 
@@ -36,7 +37,7 @@ export default function Navbar() {
             <img src="/LogoHeader.svg" alt="NAIKIN" className="navbar-logo-img" />
             <div className="brand-text-container">
               <span className="brand-name">NAIKIN</span>
-              <span className="brand-tagline">NAIKIN BISNISMU SEKARANG</span>
+              <span className="brand-tagline">SPESIALIS WEBSITE KLINIK</span>
             </div>
           </a>
 
@@ -46,8 +47,8 @@ export default function Navbar() {
             ))}
           </div>
 
-          <a href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20konsultasi%20gratis!" className="btn-primary navbar-cta">
-            Konsultasi Gratis
+          <a href="#audit" className="btn-primary navbar-cta">
+            Audit Gratis
           </a>
 
           <button
@@ -71,12 +72,12 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20konsultasi%20gratis!"
+            href="#audit"
             className="btn-primary"
             style={{ marginTop: '32px', width: '100%', justifyContent: 'center' }}
             onClick={handleLinkClick}
           >
-            Konsultasi Gratis
+            Audit Klinik Gratis
           </a>
         </div>
       </div>
@@ -131,7 +132,7 @@ export default function Navbar() {
           font-family: 'Inter', sans-serif;
           font-weight: 900;
           font-size: 22px;
-          color: #000000;
+          color: var(--text-primary);
           letter-spacing: -0.5px;
           text-transform: uppercase;
         }
@@ -140,7 +141,7 @@ export default function Navbar() {
           font-family: 'Inter', sans-serif;
           font-weight: 700;
           font-size: 9.5px;
-          color: #359EFF;
+          color: var(--accent);
           letter-spacing: 0.8px;
           margin-top: -1px;
           text-transform: uppercase;

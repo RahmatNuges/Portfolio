@@ -1,46 +1,39 @@
-import { Monitor, Search, CheckCircle } from 'lucide-react';
+import { Monitor, Search, CheckCircle, ClipboardCheck } from 'lucide-react';
 
 export default function Services() {
   const services = [
     {
       icon: <Monitor size={36} />,
-      title: 'Website yang Menjual, Bukan Sekadar Ada',
-      desc: 'Calon pelanggan akan googling nama bisnis kamu sebelum mereka hubungi kamu. Kalau yang mereka temukan tidak meyakinkan, mereka pergi ke kompetitor. Kami pastikan itu tidak terjadi.',
+      title: 'Website Klinik Premium',
+      desc: 'Untuk klinik yang ingin tampil lebih profesional, memiliki informasi layanan yang rapi, dan memudahkan calon pasien untuk booking melalui WhatsApp.',
       features: [
-        'Desain custom sesuai brand',
-        'Buka dalam hitungan detik, pengunjung tidak kabur sebelum lihat produk kamu',
-        'Tampil sempurna di HP, tablet, maupun laptop',
-        'Tombol WhatsApp langsung di website, calon klien tinggal tap, langsung chat kamu',
-        'Revisi sampai kamu senyum, tidak ada biaya tambahan',
+        'Desain eksklusif bertema medis profesional',
+        'Mobile-friendly & loading cepat (< 2 detik)',
+        'Navigasi ramah untuk semua usia',
+        'Tombol WhatsApp booking terintegrasi',
+        'Halaman per-layanan yang informatif',
       ],
     },
     {
       icon: <Search size={36} />,
-      title: 'Muncul di Google Saat Orang Butuh Kamu',
-      desc: "Bayangkan ada orang di Jogja yang ketik 'jasa [bisnis kamu] Jogja' di Google. Kami pastikan nama kamu yang muncul, bukan kompetitor kamu.",
+      title: 'SEO & Maintenance Bulanan',
+      desc: 'Untuk klinik yang ingin website tetap aktif, terawat, dan terus dioptimasi agar lebih mudah ditemukan calon pasien di pencarian Google lokal.',
       features: [
-        'Kami cari tahu kata-kata apa yang diketik calon pelanggan kamu di Google',
-        "Website kamu dibuat 'disukai' Google dari dalam dan luar",
-        'Reputasi website kamu dibangun sehingga Google makin percaya dan makin sering menampilkan kamu',
-        'Setiap bulan kamu lihat sendiri: berapa orang menemukan bisnis kamu lewat Google',
-        'Konten yang ditulis bukan asal-asalan, tapi berdasarkan apa yang benar-benar dicari orang',
+        'Optimasi kata kunci lokal kota klinik Anda',
+        'Konten edukasi medis bulanan (SEO-optimized)',
+        'Monitoring performa & keamanan website',
+        'Laporan bulanan transparan & mudah dipahami',
+        'Perbaikan teknis & update berkala',
       ],
     },
-  ];
-
-  const addons = [
-    'Copywriting halaman website',
-    'Setup Google Business Profile',
-    'Pemeliharaan & update website',
-    'Konsultasi strategi digital',
   ];
 
   return (
     <section className="services section" id="layanan">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <p className="section-label">APA YANG KAMI KERJAKAN</p>
-          <h2 className="title-large">Dua Senjata Utama untuk Bisnis Kamu Online</h2>
+          <p className="section-label">LAYANAN KAMI</p>
+          <h2 className="title-large">Layanan NAIKIN untuk Klinik</h2>
         </div>
 
         <div className="services-list">
@@ -50,7 +43,7 @@ export default function Services() {
               <div className="mockup-container">
                 <img
                   src="/website-mockup.webp"
-                  alt="Website Mockup"
+                  alt="Website Klinik Premium oleh NAIKIN"
                   className="mockup-img"
                   loading="lazy"
                   srcSet="/website-mockup.webp 700w"
@@ -82,25 +75,25 @@ export default function Services() {
               <div className="google-illustration">
                 <div className="search-bar-ui">
                   <div className="search-dot" style={{ background: '#4285F4' }}></div>
-                  <div className="search-text-ui">klinik gigi jogja terdekat</div>
+                  <div className="search-text-ui">klinik gigi terdekat di [kota anda]</div>
                   <Search size={16} color="#9aa0a6" />
                 </div>
                 <div className="search-results-ui">
                   <div className="result-item highlighted">
                     <div className="res-meta">https://klinik-anda.id</div>
-                    <div className="res-title">Klinik Gigi Terbaik & Modern di Jogja - Klinik Gigi Anda</div>
-                    <div className="res-desc">Layanan behel, scaling, dan perawatan gigi profesional dengan dokter spesialis berpengalaman. Booking sekarang...</div>
+                    <div className="res-title">Klinik Gigi Terbaik & Modern - Klinik Anda</div>
+                    <div className="res-desc">Layanan perawatan gigi profesional dengan dokter spesialis berpengalaman. Booking sekarang via WhatsApp...</div>
                     <div className="pop-indicator">#1</div>
                   </div>
                   <div className="result-item dimmed">
                     <div className="res-meta">https://kompetitorgigi.com</div>
-                    <div className="res-title">Praktek Dokter Gigi Murah - Kompetitor A</div>
-                    <div className="res-desc">Kami melayani pembersihan karang gigi dan tambal gigi dengan harga terjangkau di pusat kota...</div>
+                    <div className="res-title">Praktek Dokter Gigi - Kompetitor A</div>
+                    <div className="res-desc">Kami melayani pembersihan karang gigi dan tambal gigi dengan harga terjangkau...</div>
                   </div>
                   <div className="result-item dimmed">
                     <div className="res-meta">https://kliniklain.id</div>
-                    <div className="res-title">Ahli Pasang Behel - Klinik Gigi B</div>
-                    <div className="res-desc">Temukan berbagai promo menarik untuk pemasangan behel dan perawatan estetik gigi lainnya...</div>
+                    <div className="res-title">Klinik Gigi B - Perawatan Estetik</div>
+                    <div className="res-desc">Temukan berbagai promo menarik untuk pemasangan behel dan perawatan gigi...</div>
                   </div>
                 </div>
               </div>
@@ -122,17 +115,22 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="addons" data-aos="fade-up" data-aos-delay="200">
-          <span className="addons-label">Add-ons:</span>
-          {addons.map((a, i) => (
-            <span key={i} className="addon-tag">+ {a}</span>
-          ))}
+        {/* Service 3: Audit */}
+        <div className="audit-addon" data-aos="fade-up">
+          <div className="addon-inner">
+            <ClipboardCheck size={28} className="addon-icon" />
+            <div className="addon-text">
+              <h3>Audit Digital Klinik</h3>
+              <p>Untuk mengetahui apa saja yang perlu diperbaiki dari website, Google Maps, Instagram, dan tampilan digital klinik Anda.</p>
+            </div>
+            <a href="#audit" className="btn-primary addon-cta">Minta Audit Gratis</a>
+          </div>
         </div>
       </div>
 
       <style>{`
         .services {
-          background: linear-gradient(135deg, #F4F7FF 0%, #E8F2FF 100%);
+          background: linear-gradient(135deg, #EFF6FF 0%, #E0F2FE 100%);
           padding: 120px 0;
           overflow: hidden;
         }
@@ -244,7 +242,7 @@ export default function Services() {
           background: white;
           padding: 20px;
           border-radius: 16px;
-          box-shadow: 0 20px 40px rgba(53, 158, 255, 0.15);
+          box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
           border: 2.5px solid var(--accent);
           transform: scale(1.08) translateZ(0);
           z-index: 10;
@@ -323,33 +321,40 @@ export default function Services() {
           margin-top: 2px;
         }
 
-        .addons {
-          margin-top: 40px;
+        /* Audit Addon */
+        .audit-addon {
+          margin-top: 20px;
+        }
+        .addon-inner {
           display: flex;
           align-items: center;
-          gap: 16px;
-          flex-wrap: wrap;
-          justify-content: center;
-          padding: 32px;
+          gap: 24px;
+          padding: 32px 40px;
           background: rgba(255,255,255,0.8);
           border-radius: 24px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.05);
           border: 1px solid rgba(255,255,255,1);
         }
-
-        .addons-label {
-          font-weight: 700;
-          font-size: 16px;
-          color: #1a242d;
-        }
-
-        .addon-tag {
-          background: #EEF6FF;
+        .addon-icon {
           color: var(--accent);
+          flex-shrink: 0;
+        }
+        .addon-text {
+          flex: 1;
+        }
+        .addon-text h3 {
+          font-size: 20px;
+          margin-bottom: 6px;
+        }
+        .addon-text p {
           font-size: 14px;
-          font-weight: 700;
-          padding: 8px 20px;
-          border-radius: 50px;
+          color: var(--muted);
+          line-height: 1.6;
+        }
+        .addon-cta {
+          flex-shrink: 0;
+          padding: 14px 28px;
+          font-size: 14px;
         }
 
         @media (max-width: 1024px) {
@@ -359,6 +364,7 @@ export default function Services() {
           .service-desc-large { font-size: 16px; }
           .service-features-large li { font-size: 16px; }
           .badge-1, .badge-2 { display: none; }
+          .addon-inner { flex-direction: column; text-align: center; }
         }
 
         @media (max-width: 767px) {
