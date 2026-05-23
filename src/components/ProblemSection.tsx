@@ -5,7 +5,7 @@ export default function ProblemSection() {
     {
       icon: <Search size={28} />,
       title: 'Calon Pasien Cek Google Dulu',
-      desc: 'Sebelum booking, calon pasien cek Google dulu. Jika klinik Anda tidak muncul atau website-nya terlihat kurang profesional, mereka akan pindah ke klinik lain yang terlihat lebih terpercaya.',
+      desc: 'Sebelum memutuskan, 9 dari 10 calon pasien akan mencari klinik Anda di Google. Jika klinik Anda tidak muncul, atau website-nya terlihat ketinggalan zaman, mereka akan beralih ke kompetitor yang lebih siap. Jangan biarkan pasien potensial hilang begitu saja!',
     },
     {
       icon: <Smartphone size={28} />,
@@ -15,7 +15,7 @@ export default function ProblemSection() {
     {
       icon: <AlertTriangle size={28} />,
       title: 'Website Ada Tapi Tidak Menghasilkan',
-      desc: 'Sudah punya website tapi tidak pernah ada pasien yang datang dari sana? Website tanpa struktur SEO yang tepat hanya menjadi kartu nama digital yang tidak bekerja untuk bisnis Anda.',
+      desc: 'Sudah punya website tapi sepi pengunjung atau tidak ada booking dari sana? Website tanpa strategi SEO yang tepat hanya menjadi brosur digital yang tidak aktif. Kami hadirkan website yang tidak hanya indah, tapi juga bekerja keras mendatangkan pasien untuk Anda.',
     },
   ];
 

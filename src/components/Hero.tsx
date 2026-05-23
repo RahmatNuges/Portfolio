@@ -20,7 +20,7 @@ export default function Hero() {
 
         {/* Hero Content (Headline, Sub-headline, CTAs, Trust Chips) placed BELOW Image */}
         <div className="hero-content" data-aos="fade-up" data-aos-delay="100">
-          <h1>Website Klinik Premium yang bantu Tingkatkan Kepercayaan Calon Pasien <span className="text-gradient">Sebelum Booking</span></h1>
+          <h1>Bangun Kepercayaan & Tingkatkan Booking Pasien Baru dengan <span className="text-gradient">Website Klinik Premium</span></h1>
 
           <p className="hero-sub">
             Ubah pencarian Google menjadi kunjungan klinik dengan website premium & SEO lokal teroptimasi.
@@ -45,7 +45,7 @@ export default function Hero() {
               href="#audit"
               className="btn-primary"
             >
-              <MessageCircle size={20} /> Minta Audit Klinik Gratis
+              Minta Audit Klinik Gratis
             </a>
             <a href="#portofolio" className="btn-ghost">
               Lihat Portofolio Website Klinik
