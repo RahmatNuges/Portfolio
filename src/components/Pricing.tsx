@@ -3,7 +3,7 @@ import { CheckCircle, X, Star } from 'lucide-react';
 export default function Pricing() {
   const plans = [
     {
-      name: 'Premium',
+      name: 'Pondasi Klinik',
       price: 'Rp 4.700.000',
       desc: 'Cocok untuk klinik yang ingin mulai punya website profesional pertama dengan struktur yang rapi dan siap membangun trust calon pasien.',
       features: [
@@ -16,11 +16,11 @@ export default function Pricing() {
         { text: 'Free hosting & domain (.com/.id) tahun pertama', included: true },
         { text: 'Riset kata kunci & Google Business Profile', included: false },
       ],
-      cta: 'Pilih Paket Premium',
+      cta: 'Pilih Pondasi Klinik',
       popular: false,
     },
     {
-      name: 'Premium Plus',
+      name: 'Pondasi Klinik Plus',
       price: 'Rp 9.700.000',
       desc: 'Cocok untuk klinik dengan banyak layanan yang ingin tampil lebih premium dan membangun pondasi SEO lokal yang lebih serius.',
       features: [
@@ -33,7 +33,7 @@ export default function Pricing() {
         { text: 'Unlimited revisi sampai sesuai standar', included: true },
         { text: 'GRATIS maintenance & update teknis 3 bulan pertama', included: true },
       ],
-      cta: 'Pilih Paket Premium Plus',
+      cta: 'Pilih Pondasi Klinik Plus',
       popular: true,
     },
   ];
@@ -45,7 +45,7 @@ export default function Pricing() {
           <p className="section-label">PAKET WEBSITE KLINIK</p>
           <h2>Pilih Paket yang Tepat untuk Klinik Anda</h2>
           <p className="pricing-intro">
-            Tidak semua klinik butuh paket terbesar. Kami bantu rekomendasikan paket berdasarkan kondisi klinik, jumlah layanan, target lokasi, dan kebutuhan Anda.
+            Tidak semua klinik butuh paket terbesar. Karena itu kami biasanya mulai dari audit untuk melihat prioritas yang paling masuk akal bagi kondisi klinik Anda.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function Pricing() {
               {p.popular && (
                 <div className="pricing-badge"><Star size={14} fill="#2563EB" /> Terpopuler</div>
               )}
-              <h3 className="pricing-name">Paket {p.name}</h3>
+              <h3 className="pricing-name">{p.name}</h3>
               <div className="pricing-price">{p.price}</div>
               <p className="pricing-desc">{p.desc}</p>
               <ul className="pricing-features">
@@ -88,9 +88,9 @@ export default function Pricing() {
         <div className="maintenance-addon" data-aos="fade-up">
           <div className="maintenance-inner liquid-glass-card">
             <div className="maintenance-info">
-              <h3>SEO & Maintenance Bulanan</h3>
+              <h3>SEO & Conversion Care</h3>
               <div className="maintenance-price">Rp 1.800.000<span>/bulan</span></div>
-              <p>Website adalah pondasi. SEO dan maintenance membantu website tetap aktif, terawat, dan terus dioptimasi secara berkelanjutan.</p>
+              <p>Website adalah pondasi. SEO dan conversion care membantu website tetap aktif, terawat, dan terus dioptimasi secara berkelanjutan.</p>
             </div>
             <ul className="maintenance-features">
               <li><CheckCircle size={16} className="pricing-check" /> Maintenance website & keamanan</li>
@@ -102,7 +102,7 @@ export default function Pricing() {
             <a 
               href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20tanya%20tentang%20SEO%20bulanan" 
               className="btn-ghost maintenance-btn"
-            >Tanya Tentang SEO Bulanan</a>
+            >Tanya Tentang Care Plan</a>
           </div>
         </div>
       </div>

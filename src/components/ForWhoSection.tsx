@@ -2,20 +2,18 @@ import { XCircle, CheckCircle } from 'lucide-react';
 
 export default function ForWhoSection() {
   const notFor = [
-    'Klinik yang hanya mencari website murah tanpa strategi',
-    'Klinik yang tidak butuh copywriting dan struktur SEO dasar',
-    'Klinik yang hanya ingin template instan tanpa kustomisasi',
-    'Klinik yang belum siap berinvestasi untuk tampilan digital profesional',
+    'Klinik yang hanya mencari website cepat jadi tanpa perencanaan strategi',
+    'Klinik yang tidak membutuhkan bantuan copywriting dan optimasi data',
+    'Klinik yang lebih memilih template instan massal tanpa kustomisasi',
+    'Klinik yang belum memprioritaskan kualitas tampilan digital profesional',
   ];
 
   const forYou = [
-    'Klinik gigi yang ingin terlihat lebih profesional',
-    'Klinik kecantikan yang ingin meningkatkan trust calon pasien',
-    'Klinik yang belum punya website',
-    'Klinik yang website lamanya sudah terlihat outdated',
-    'Klinik yang ingin mulai SEO lokal',
-    'Klinik yang ingin semua informasi layanan lebih rapi',
-    'Klinik yang ingin mengarahkan calon pasien ke WhatsApp booking',
+    'Klinik gigi dan kecantikan yang ingin tampil lebih rapi dan kredibel',
+    'Klinik yang ingin membangun trust signal lebih kuat bagi calon pasien baru',
+    'Klinik yang ingin mulai mengoptimasi pencarian SEO lokal secara terarah',
+    'Klinik yang ingin alur booking WhatsApp lebih jelas dan terstruktur',
+    'Klinik yang ingin memperbarui website lama agar terlihat modern',
   ];
 
   return (

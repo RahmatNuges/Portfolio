@@ -5,17 +5,17 @@ export default function WhyWebsite() {
     {
       icon: <ShieldCheck size={32} />,
       title: 'Bangun Trust',
-      desc: 'Tampilkan dokter, layanan, foto klinik, testimoni, lokasi, dan cara booking — agar calon pasien lebih mudah percaya sebelum datang.',
+      desc: 'Tampilkan informasi kredibel seperti profil dokter, ulasan pasien, dan fasilitas fisik untuk membantu calon pasien lebih cepat yakin sebelum berkunjung.',
     },
     {
       icon: <LayoutList size={32} />,
       title: 'Rapikan Informasi',
-      desc: 'Semua informasi penting tersusun jelas dalam satu tempat: layanan, dokter, jam operasional, lokasi, dan WhatsApp booking.',
+      desc: 'Satukan jam operasional, lokasi Maps, detail layanan, dan alur reservasi di satu tempat agar calon pasien tidak kebingungan atau beralih.',
     },
     {
       icon: <MapPin size={32} />,
       title: 'Siap SEO Lokal',
-      desc: 'Struktur halaman dibuat agar website klinik Anda lebih siap muncul di pencarian Google saat calon pasien mencari layanan kesehatan di kota Anda.',
+      desc: 'Persiapkan optimasi pencarian lokal Google Maps agar klinik Anda mudah ditemukan oleh calon pasien yang aktif mencari layanan terdekat.',
     },
   ];
 

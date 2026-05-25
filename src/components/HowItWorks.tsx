@@ -6,7 +6,7 @@ export default function HowItWorks() {
       num: '01',
       icon: <Search size={24} />,
       title: 'Audit & Konsultasi Awal',
-      desc: 'Kami cek kondisi digital klinik Anda: website, Google Maps, Instagram, layanan, dan kompetitor lokal. Gratis, tanpa paksaan.',
+      desc: 'Kami cek kondisi digital klinik Anda: website, Google Maps, Instagram, alur booking, dan kompetitor lokal. Gratis, tanpa paksaan.',
     },
     {
       num: '02',
@@ -47,7 +47,7 @@ export default function HowItWorks() {
     {
       num: '08',
       icon: <BarChart3 size={24} />,
-      title: 'Maintenance & SEO',
+      title: 'SEO & Conversion Care',
       desc: 'Kami bantu update, monitoring, optimasi konten, dan laporan bulanan.',
     },
   ];

@@ -13,10 +13,10 @@ export default function CTAFinal() {
           <MessageCircle size={16} /> Audit Gratis
         </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="50">Siap Naikin Level Digital Klinik Anda?</h2>
+        <h2 data-aos="fade-up" data-aos-delay="50">Mulai dari Audit Klinik, Lalu Tentukan Langkah yang Paling Tepat</h2>
 
         <p className="cta-final-sub" data-aos="fade-up" data-aos-delay="100">
-          Mulai dari audit gratis. Kami bantu cek kondisi digital klinik Anda dan rekomendasikan langkah paling tepat untuk website dan SEO klinik Anda.
+          Jika Anda belum yakin harus mulai dari website baru, perbaikan website lama, atau SEO lokal, mulai saja dari audit. Kami bantu tunjukkan prioritas yang paling masuk akal untuk klinik Anda.
         </p>
 
         <div className="cta-final-buttons" data-aos="fade-up" data-aos-delay="150">
@@ -24,7 +24,7 @@ export default function CTAFinal() {
             href="#audit"
             className="btn-primary cta-audit-btn"
           >
-            Audit Klinik Saya Gratis
+            Minta Audit Klinik
           </a>
           <a
             href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20konsultasi%20tentang%20website%20klinik"

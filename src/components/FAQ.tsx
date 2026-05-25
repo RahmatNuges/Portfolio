@@ -4,6 +4,22 @@ import { ChevronDown } from 'lucide-react';
 export default function FAQ() {
   const faqs = [
     {
+      q: 'Kalau saya sudah punya website, apakah tetap perlu audit?',
+      a: 'Sangat disarankan. Audit membantu Anda mengetahui apakah website Anda saat ini sudah optimal dalam membangun trust signal, mengarahkan CTA booking WhatsApp dengan benar, dan siap bersaing untuk SEO lokal.',
+    },
+    {
+      q: 'Audit gratis ini mencakup apa saja?',
+      a: 'Kami menganalisis kesiapan alur booking, kejelasan penataan layanan, penempatan trust signal (profil dokter & ulasan), optimasi mobile speed, serta kesiapan Google Maps.',
+    },
+    {
+      q: 'Apa bedanya website yang terlihat bagus dengan website yang benar-benar membantu booking?',
+      a: 'Website yang sekadar bagus hanya fokus pada estetika visual. Website yang membantu booking dirancang dengan penataan informasi yang sistematis, CTA yang konsisten, dan kemudahan alur komunikasi WhatsApp.',
+    },
+    {
+      q: 'Kalau saya belum siap SEO bulanan, apakah masih bisa mulai dari audit atau pondasi website dulu?',
+      a: 'Tentu saja. Anda bisa memprioritaskan pembuatan website terlebih dahulu melalui paket Pondasi Klinik. Layanan SEO & Conversion Care bulanan dapat diaktifkan kapan saja saat Anda siap.',
+    },
+    {
       q: 'Apakah SEO langsung ranking 1?',
       a: 'Tidak ada SEO yang bisa menjamin ranking 1 secara instan. Yang kami bantu adalah membangun pondasi website agar lebih siap bersaing secara organik di pencarian lokal.',
     },
@@ -13,19 +29,19 @@ export default function FAQ() {
     },
     {
       q: 'Kami tidak punya staf IT. Siapa yang urus website-nya?',
-      a: 'Melalui layanan SEO & Maintenance bulanan, tim NAIKIN bertindak sebagai tim IT eksternal klinik Anda. Semua update, perbaikan, dan optimasi ditangani kami.',
+      a: 'Melalui layanan SEO & Conversion Care bulanan, tim NAIKIN bertindak sebagai tim IT eksternal klinik Anda. Semua update, perbaikan, dan optimasi ditangani kami.',
     },
     {
-      q: 'Kenapa SEO bulanan Rp1,8jt itu penting?',
-      a: 'Peringkat Google bersifat dinamis. Kompetitor Anda juga berinvestasi di digital. Biaya bulanan digunakan untuk produksi konten, monitoring, dan memastikan klinik Anda tetap direkomendasikan Google.',
+      q: 'Kenapa SEO & Conversion Care bulanan itu penting?',
+      a: 'Peringkat Google bersifat dinamis dan kompetitor terus melakukan pembaruan. Care plan bulanan memastikan website Anda tetap aman, aktif, teroptimasi, dan terus relevan di mata Google.',
     },
     {
       q: 'Bisa pakai domain lama?',
       a: 'Bisa, selama akses domain/hosting tersedia. Jika belum punya, kami bantu arahkan.',
     },
     {
-      q: 'Apa bedanya paket Premium dan Premium Plus?',
-      a: 'Premium cocok untuk klinik yang ingin mulai punya website profesional (5 halaman). Premium Plus cocok untuk klinik dengan banyak layanan yang butuh halaman per-treatment dan SEO lebih serius (hingga lebih dari 12 halaman).',
+      q: 'Apa bedanya paket Pondasi Klinik dan Pondasi Klinik Plus?',
+      a: 'Pondasi Klinik cocok untuk klinik yang ingin mulai punya website profesional pertama (5 halaman). Pondasi Klinik Plus cocok untuk klinik dengan banyak layanan yang butuh halaman spesifik per-treatment dan SEO lokal lebih mendalam (hingga lebih dari 12 halaman).',
     },
     {
       q: 'Bisa terhubung ke WhatsApp?',
@@ -33,7 +49,7 @@ export default function FAQ() {
     },
     {
       q: 'Apakah bisa revisi?',
-      a: 'Bisa. Revisi dilakukan sesuai scope paket. Paket Premium Plus mendapat unlimited revisi.',
+      a: 'Bisa. Revisi dilakukan sesuai scope paket. Paket Pondasi Klinik Plus mendapatkan unlimited revisi.',
     },
   ];
 

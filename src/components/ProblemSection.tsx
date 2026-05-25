@@ -5,17 +5,17 @@ export default function ProblemSection() {
     {
       icon: <Search size={28} />,
       title: 'Calon Pasien Cek Google Dulu',
-      desc: 'Sebelum memutuskan, 9 dari 10 calon pasien akan mencari klinik Anda di Google. Jika klinik Anda tidak muncul, atau website-nya terlihat ketinggalan zaman, mereka akan beralih ke kompetitor yang lebih siap. Jangan biarkan pasien potensial hilang begitu saja!',
+      desc: 'Sebelum berkunjung, calon pasien akan mencari klinik Anda di Google. Jika klinik Anda tidak muncul atau terlihat tertinggal, mereka akan beralih ke kompetitor.',
     },
     {
       icon: <Smartphone size={28} />,
       title: 'Instagram Aktif, Tapi Informasi Tercecer',
-      desc: 'Instagram memang penting, tapi informasi layanan, dokter, lokasi, dan jadwal sering tercecer. Calon pasien butuh satu tempat yang rapi untuk melihat semua informasi klinik sebelum mengambil keputusan.',
+      desc: 'Instagram penting, tapi info layanan, lokasi, dan jadwal dokter sering tercecer. Calon pasien butuh satu tempat yang rapi untuk melihat info lengkap.',
     },
     {
       icon: <AlertTriangle size={28} />,
       title: 'Website Ada Tapi Tidak Menghasilkan',
-      desc: 'Sudah punya website tapi sepi pengunjung atau tidak ada booking dari sana? Website tanpa strategi SEO yang tepat hanya menjadi brosur digital yang tidak aktif. Kami hadirkan website yang tidak hanya indah, tapi juga bekerja keras mendatangkan pasien untuk Anda.',
+      desc: 'Sudah punya website tapi sepi booking? Tanpa optimasi SEO lokal, website Anda hanya akan menjadi brosur digital pasif yang tidak mendatangkan pasien baru.',
     },
   ];
 
@@ -38,7 +38,7 @@ export default function ProblemSection() {
         </div>
 
         <p className="problem-closing" data-aos="fade-up">
-          Banyak klinik sudah punya layanan yang bagus, tapi tampilan digitalnya belum cukup meyakinkan calon pasien untuk booking.
+          Banyak klinik sebenarnya sudah punya layanan yang bagus. Masalahnya, tampilan digitalnya belum cukup membantu calon pasien mengambil keputusan.
         </p>
       </div>
 

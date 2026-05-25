@@ -48,7 +48,7 @@ export default function Navbar() {
           </div>
 
           <a href="#audit" className="btn-primary navbar-cta">
-            Audit Gratis
+            Minta Audit Klinik
           </a>
 
           <button
@@ -77,7 +77,7 @@ export default function Navbar() {
             style={{ marginTop: '32px', width: '100%', justifyContent: 'center' }}
             onClick={handleLinkClick}
           >
-            Audit Klinik Gratis
+            Minta Audit Klinik
           </a>
         </div>
       </div>

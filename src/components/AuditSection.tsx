@@ -40,9 +40,9 @@ export default function AuditSection() {
         <div className="audit-grid">
           <div className="audit-info" data-aos="fade-up">
             <p className="section-label">AUDIT GRATIS</p>
-            <h2>Mau Tahu Website Klinik Anda Perlu Diperbaiki dari Mana?</h2>
+            <h2>Mulai dari Audit Klinik agar Tahu Prioritas yang Paling Penting</h2>
             <p className="audit-sub">
-              Kami bantu cek tampilan digital klinik Anda dan berikan rekomendasi prioritas agar lebih profesional dan lebih siap untuk calon pasien.
+              Kami bantu cek website, Google Maps, Instagram, dan alur booking klinik Anda lalu menunjukkan bagian mana yang paling perlu dibenahi lebih dulu.
             </p>
 
             <div className="audit-checklist">
@@ -119,7 +119,7 @@ export default function AuditSection() {
               </div>
 
               <button type="submit" className="btn-primary audit-submit">
-                <Send size={18} /> Minta Audit Gratis
+                <Send size={18} /> Minta Audit Klinik
               </button>
             </form>
           </div>

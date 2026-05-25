@@ -20,10 +20,10 @@ export default function Hero() {
 
         {/* Hero Content (Headline, Sub-headline, CTAs, Trust Chips) placed BELOW Image */}
         <div className="hero-content" data-aos="fade-up" data-aos-delay="100">
-          <h1>Bangun Kepercayaan & Tingkatkan Booking Pasien Baru dengan <span className="text-gradient">Website Klinik Premium</span></h1>
+          <h1><span className="text-gradient">Website Klinik</span> yang Membantu Calon Pasien Lebih Yakin Sebelum Booking</h1>
 
           <p className="hero-sub">
-            Ubah pencarian Google menjadi kunjungan klinik dengan website premium & SEO lokal teroptimasi.
+            Kami bantu klinik gigi dan kecantikan merapikan website, CTA booking, dan pondasi SEO lokal agar lebih mudah ditemukan, dipahami, dan dipercaya.
           </p>
 
           <div className="hero-visual" data-aos="fade-up" data-aos-delay="50">
@@ -45,10 +45,10 @@ export default function Hero() {
               href="#audit"
               className="btn-primary"
             >
-              Minta Audit Klinik Gratis
+              Minta Audit Klinik
             </a>
             <a href="#portofolio" className="btn-ghost">
-              Lihat Portofolio Website Klinik
+              Lihat Contoh Website Klinik
             </a>
           </div>
 
