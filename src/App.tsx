@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
@@ -13,6 +13,7 @@ import FAQ from './components/FAQ';
 import CTAFinal from './components/CTAFinal';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import ThankYou from './components/ThankYou';
 
 declare global {
   interface Window {
@@ -24,7 +25,18 @@ declare global {
 }
 
 export default function App() {
+  const [isThankYou, setIsThankYou] = useState(false);
+
   useEffect(() => {
+    // Check path, search queries, or hash parameters for thank-you
+    const path = window.location.pathname.toLowerCase();
+    const hash = window.location.hash.toLowerCase();
+    const search = window.location.search.toLowerCase();
+    
+    if (path.includes('thank-you') || hash.includes('thank-you') || search.includes('thank-you')) {
+      setIsThankYou(true);
+    }
+
     // Initialize AOS after mount
     if (window.AOS) {
       window.AOS.init({
@@ -35,6 +47,10 @@ export default function App() {
       });
     }
   }, []);
+
+  if (isThankYou) {
+    return <ThankYou />;
+  }
 
   return (
     <>
