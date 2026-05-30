@@ -31,7 +31,7 @@ export default function Pricing() {
         { text: 'Full setup & optimasi Google Business Profile', included: true },
         { text: 'Halaman dokter/tim & halaman lokasi', included: true },
         { text: 'Unlimited revisi sampai sesuai standar', included: true },
-        { text: 'GRATIS maintenance & update teknis 3 bulan pertama', included: true },
+        { text: 'GRATIS maintenance & update teknis 1 bulan pertama (Value Rp 2,3 Juta)', included: true },
       ],
       cta: 'Pilih Pondasi Klinik Plus',
       popular: true,
