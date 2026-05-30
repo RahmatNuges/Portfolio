@@ -4,7 +4,7 @@ export default function Pricing() {
   const plans = [
     {
       name: 'Pondasi Klinik',
-      price: 'Rp 4.700.000',
+      price: 'Rp 4.900.000',
       desc: 'Cocok untuk klinik yang ingin mulai punya website profesional pertama dengan struktur yang rapi dan siap membangun trust calon pasien.',
       features: [
         { text: '5 halaman utama (Home, Profil, Layanan, Galeri, Kontak)', included: true },
@@ -26,8 +26,8 @@ export default function Pricing() {
       features: [
         { text: 'Hingga lebih dari 12 halaman spesialistik per-treatment', included: true },
         { text: 'Custom brand identity & UI/UX teroptimasi tinggi', included: true },
-        { text: 'Form reservasi pintar + WhatsApp call routing', included: true },
-        { text: 'Riset 20 kata kunci lokal + Google Analytics & Search Console', included: true },
+        { text: 'Form reservasi pintar', included: true },
+        { text: 'Riset kata kunci lokal + 10 Artikel SEO Optimized + Google Analytics & Search Console', included: true },
         { text: 'Full setup & optimasi Google Business Profile', included: true },
         { text: 'Halaman dokter/tim & halaman lokasi', included: true },
         { text: 'Unlimited revisi sampai sesuai standar', included: true },
@@ -75,8 +75,8 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a 
-                href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20tertarik%20paket%20ini!" 
+              <a
+                href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20tertarik%20paket%20ini!"
                 className={`btn-primary pricing-btn ${p.popular ? '' : 'btn-outline'}`}
               >  {p.cta}
               </a>
@@ -89,18 +89,18 @@ export default function Pricing() {
           <div className="maintenance-inner liquid-glass-card">
             <div className="maintenance-info">
               <h3>SEO & Conversion Care</h3>
-              <div className="maintenance-price">Rp 1.800.000<span>/bulan</span></div>
+              <div className="maintenance-price">Rp 2.300.000<span>/bulan</span></div>
               <p>Website adalah pondasi. SEO dan conversion care membantu website tetap aktif, terawat, dan terus dioptimasi secara berkelanjutan.</p>
             </div>
             <ul className="maintenance-features">
               <li><CheckCircle size={16} className="pricing-check" /> Maintenance website & keamanan</li>
-              <li><CheckCircle size={16} className="pricing-check" /> Konten edukasi medis bulanan</li>
+              <li><CheckCircle size={16} className="pricing-check" /> Konten edukasi medis 8-10 artikel/bulanan</li>
               <li><CheckCircle size={16} className="pricing-check" /> Monitoring performa & ranking</li>
               <li><CheckCircle size={16} className="pricing-check" /> Laporan bulanan transparan</li>
               <li><CheckCircle size={16} className="pricing-check" /> Perbaikan teknis sesuai scope</li>
             </ul>
-            <a 
-              href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20tanya%20tentang%20SEO%20bulanan" 
+            <a
+              href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20tanya%20tentang%20SEO%20bulanan"
               className="btn-ghost maintenance-btn"
             >Tanya Tentang Care Plan</a>
           </div>
