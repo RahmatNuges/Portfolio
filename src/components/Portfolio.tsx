@@ -3,6 +3,13 @@ import { ArrowUpRight } from 'lucide-react';
 export default function Portfolio() {
   const projects = [
     {
+      title: 'Klinik Jelita',
+      type: 'Klinik Kecantikan & Anti-Aging',
+      image: '/portfolio/klinik-jelita.webp',
+      link: 'https://klinik-jelita.vercel.app/',
+      desc: 'Website klinik kecantikan premium dan anti-aging dengan kuis diagnostik kulit interaktif, before/after slider, dan sistem reservasi online terintegrasi.',
+    },
+    {
       title: 'Renie Dent',
       type: 'Klinik Gigi Anak — Banjarmasin',
       image: '/portfolio/renie-dent.webp',
