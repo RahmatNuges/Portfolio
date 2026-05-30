@@ -1,18 +1,7 @@
-import { useState } from 'react';
-import { CheckCircle, Send } from 'lucide-react';
+import { useEffect } from 'react';
+import { CheckCircle } from 'lucide-react';
 
 export default function AuditSection() {
-  const [formData, setFormData] = useState({
-    nama: '',
-    namaKlinik: '',
-    jenisKlinik: '',
-    kota: '',
-    sudahWebsite: '',
-    link: '',
-    whatsapp: '',
-    kebutuhan: '',
-  });
-
   const auditPoints = [
     'Tampilan website atau profil digital klinik',
     'Kejelasan layanan dan treatment',
@@ -24,15 +13,32 @@ export default function AuditSection() {
     'Rekomendasi improvement prioritas',
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const message = `Halo NAIKIN, saya ingin audit digital klinik gratis.%0A%0ANama: ${formData.nama}%0ANama Klinik: ${formData.namaKlinik}%0AJenis: ${formData.jenisKlinik}%0AKota: ${formData.kota}%0ASudah punya website: ${formData.sudahWebsite}%0ALink: ${formData.link || '-'}%0AKebutuhan: ${formData.kebutuhan}`;
-    window.open(`https://wa.me/6282342310221?text=${message}`, '_blank');
-  };
+  useEffect(() => {
+    const w = "https://tally.so/widgets/embed.js";
+    const v = () => {
+      // @ts-ignore
+      if (typeof Tally !== "undefined") {
+        // @ts-ignore
+        Tally.loadEmbeds();
+      } else {
+        document.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((e) => {
+          const iframe = e as HTMLIFrameElement;
+          iframe.src = iframe.dataset.tallySrc || "";
+        });
+      }
+    };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    // @ts-ignore
+    if (typeof Tally !== "undefined") {
+      v();
+    } else if (document.querySelector(`script[src="${w}"]`) === null) {
+      const s = document.createElement("script");
+      s.src = w;
+      s.onload = v;
+      s.onerror = v;
+      document.body.appendChild(s);
+    }
+  }, []);
 
   return (
     <section className="audit section" id="audit">
@@ -59,69 +65,18 @@ export default function AuditSection() {
           </div>
 
           <div className="audit-form-wrapper" data-aos="fade-up" data-aos-delay="100">
-            <form className="audit-form liquid-glass-card" onSubmit={handleSubmit}>
-              <h3>Isi Form Singkat</h3>
-              
-              <div className="form-group">
-                <label htmlFor="audit-nama">Nama</label>
-                <input type="text" id="audit-nama" name="nama" placeholder="Nama Anda" required onChange={handleChange} />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="audit-klinik">Nama Klinik</label>
-                <input type="text" id="audit-klinik" name="namaKlinik" placeholder="Nama klinik Anda" required onChange={handleChange} />
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="audit-jenis">Jenis Klinik</label>
-                  <select id="audit-jenis" name="jenisKlinik" required onChange={handleChange} defaultValue="">
-                    <option value="" disabled>Pilih jenis</option>
-                    <option value="Gigi">Klinik Gigi</option>
-                    <option value="Kecantikan">Klinik Kecantikan</option>
-                    <option value="Lainnya">Lainnya</option>
-                  </select>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="audit-kota">Kota</label>
-                  <input type="text" id="audit-kota" name="kota" placeholder="Kota klinik" required onChange={handleChange} />
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="audit-website">Sudah punya website?</label>
-                <select id="audit-website" name="sudahWebsite" required onChange={handleChange} defaultValue="">
-                  <option value="" disabled>Pilih</option>
-                  <option value="Ya">Ya</option>
-                  <option value="Belum">Belum</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="audit-link">Link (Instagram / Google Maps / Website)</label>
-                <input type="text" id="audit-link" name="link" placeholder="https://... (opsional)" onChange={handleChange} />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="audit-whatsapp">Nomor WhatsApp</label>
-                <input type="tel" id="audit-whatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" required onChange={handleChange} />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="audit-kebutuhan">Kebutuhan Utama</label>
-                <select id="audit-kebutuhan" name="kebutuhan" required onChange={handleChange} defaultValue="">
-                  <option value="" disabled>Pilih kebutuhan</option>
-                  <option value="Website baru">Website baru</option>
-                  <option value="Perbaiki website lama">Perbaiki website lama</option>
-                  <option value="SEO">SEO</option>
-                  <option value="Tampil lebih premium">Tampil lebih premium</option>
-                </select>
-              </div>
-
-              <button type="submit" className="btn-primary audit-submit">
-                <Send size={18} /> Minta Audit Klinik
-              </button>
-            </form>
+            <div className="audit-form-card liquid-glass-card" style={{ padding: '24px', overflow: 'hidden' }}>
+              <iframe
+                data-tally-src="https://tally.so/embed/Gx5DQz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="892"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Isi Form Singkat"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
