@@ -13,7 +13,6 @@ export default function Pricing() {
         { text: 'Basic SEO on-page setup', included: true },
         { text: 'Google Maps embed lokasi klinik', included: true },
         { text: '2x revisi mayor', included: true },
-        { text: 'Free hosting & domain (.com/.id) tahun pertama', included: true },
         { text: 'Riset kata kunci & Google Business Profile', included: false },
       ],
       cta: 'Pilih Pondasi Klinik',
