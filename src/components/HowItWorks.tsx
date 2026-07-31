@@ -1,54 +1,34 @@
-import { Search, FileText, CreditCard, ClipboardList, Code, Eye, Rocket, BarChart3 } from 'lucide-react';
+import { Search, Palette, Rocket, BarChart3 } from 'lucide-react';
 
 export default function HowItWorks() {
   const steps = [
     {
       num: '01',
       icon: <Search size={24} />,
-      title: 'Audit & Konsultasi Awal',
-      desc: 'Kami cek kondisi digital klinik Anda: website, Google Maps, Instagram, alur booking, dan kompetitor lokal. Gratis, tanpa paksaan.',
+      title: 'Audit & Konsultasi',
+      desc: 'Kami analisis kondisi digital klinik, susun struktur halaman, dan kirim proposal. Semua tuntas dalam 1-2 hari kerja.',
+      duration: '1-2 hari',
     },
     {
       num: '02',
-      icon: <FileText size={24} />,
-      title: 'Rekomendasi Struktur',
-      desc: 'Kami susun halaman yang dibutuhkan berdasarkan kondisi dan kebutuhan klinik Anda.',
+      icon: <Palette size={24} />,
+      title: 'Desain & Development',
+      desc: 'Anda isi brief singkat (~10 menit), sisanya kami kerjakan: copywriting, desain, dan development website.',
+      duration: '5-7 hari',
     },
     {
       num: '03',
-      icon: <CreditCard size={24} />,
-      title: 'Proposal & DP',
-      desc: 'Setelah scope jelas, kami kirim proposal, timeline, dan invoice DP 50%.',
+      icon: <Rocket size={24} />,
+      title: 'Review & Launch',
+      desc: 'Anda review hasil, kami revisi, lalu website langsung live dan siap terima pasien baru.',
+      duration: '1-2 hari',
     },
     {
       num: '04',
-      icon: <ClipboardList size={24} />,
-      title: 'Brief & Pengumpulan Aset',
-      desc: 'Anda mengisi form brief singkat (~10 menit). Urusan copywriting dan kurasi visual dikerjakan tim NAIKIN.',
-    },
-    {
-      num: '05',
-      icon: <Code size={24} />,
-      title: 'Desain & Development',
-      desc: 'Website dibuat mobile-friendly, profesional, dan disiapkan dengan SEO dasar.',
-    },
-    {
-      num: '06',
-      icon: <Eye size={24} />,
-      title: 'Review & Revisi',
-      desc: 'Anda cek hasil website, lalu kami lakukan revisi sesuai scope paket.',
-    },
-    {
-      num: '07',
-      icon: <Rocket size={24} />,
-      title: 'Pelunasan & Launch',
-      desc: 'Setelah disetujui 100%, pelunasan 50% sisa dan website dipublikasikan.',
-    },
-    {
-      num: '08',
       icon: <BarChart3 size={24} />,
-      title: 'SEO & Conversion Care',
-      desc: 'Kami bantu update, monitoring, optimasi konten, dan laporan bulanan.',
+      title: 'SEO & Monitoring',
+      desc: 'Website aktif dioptimasi: update konten, monitoring performa, dan laporan bulanan.',
+      duration: 'Ongoing',
     },
   ];
 
@@ -57,7 +37,10 @@ export default function HowItWorks() {
       <div className="container">
         <div className="section-header" data-aos="fade-up">
           <p className="section-label">PROSES KERJA</p>
-          <h2>Proses Kerja Jelas dari Audit sampai Website Launch</h2>
+          <h2>Website Klinik Anda Live dalam 7-10 Hari</h2>
+          <p className="section-subtitle" style={{ color: 'var(--muted)', fontSize: '17px', maxWidth: '600px', margin: '12px auto 0' }}>
+            Cukup 4 langkah. Tanpa ribet, tanpa mengganggu operasional klinik.
+          </p>
         </div>
 
         <div className="steps-grid">
@@ -71,6 +54,7 @@ export default function HowItWorks() {
               </div>
               <h3 className="step-title">{s.title}</h3>
               <p className="step-desc">{s.desc}</p>
+              <span className="step-duration">{s.duration}</span>
             </div>
           ))}
         </div>
@@ -131,6 +115,17 @@ export default function HowItWorks() {
           font-size: 14px;
           line-height: 1.6;
           color: var(--muted);
+        }
+        .step-duration {
+          display: inline-block;
+          margin-top: 12px;
+          padding: 4px 14px;
+          font-size: 12px;
+          font-weight: 700;
+          color: var(--accent);
+          background: rgba(37, 99, 235, 0.08);
+          border-radius: 100px;
+          letter-spacing: 0.5px;
         }
 
         @media (max-width: 1023px) {

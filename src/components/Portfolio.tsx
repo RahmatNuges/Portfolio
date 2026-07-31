@@ -1,7 +1,24 @@
-import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowUpRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function Portfolio() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const projects = [
+    {
+      title: 'Mozza Dental',
+      type: 'Klinik Gigi & Spesialis',
+      image: '/portfolio/mozza-dental.webp',
+      link: 'https://mozzadental.com/',
+      desc: 'Website klinik gigi modern dan profesional dengan navigasi cepat, sajian informasi perawatan komprehensif, dan kemudahan reservasi pasien.',
+    },
+    {
+      title: 'uSmile Dental Studio',
+      type: 'Klinik & Aesthetic Dental Studio',
+      image: '/portfolio/usmile-dental.webp',
+      link: 'https://usmiledentalstudio.id/',
+      desc: 'Website studio perawatan & estetika gigi modern dengan tampilan elegan, struktur layanan informatif, dan optimasi pengalaman pasien.',
+    },
     {
       title: 'Klinik Jelita',
       type: 'Klinik Kecantikan & Anti-Aging',
@@ -11,7 +28,7 @@ export default function Portfolio() {
     },
     {
       title: 'Renie Dent',
-      type: 'Klinik Gigi Anak — Banjarmasin',
+      type: 'Klinik Gigi Anak (Banjarmasin)',
       image: '/portfolio/renie-dent.webp',
       link: 'https://reniedent.id/',
       desc: 'Website klinik gigi anak yang dirancang mobile-friendly, mengedepankan atmosfer ramah anak, dengan struktur layanan informatif dan SEO lokal.',
@@ -25,6 +42,8 @@ export default function Portfolio() {
     },
   ];
 
+  const visibleProjects = isExpanded ? projects : projects.slice(0, 4);
+
   return (
     <section className="portfolio section" id="portofolio">
       <div className="container">
@@ -34,7 +53,7 @@ export default function Portfolio() {
         </div>
 
         <div className="portfolio-grid">
-          {projects.map((p, i) => (
+          {visibleProjects.map((p, i) => (
             <a 
               key={i} 
               href={p.link} 
@@ -72,6 +91,26 @@ export default function Portfolio() {
             </a>
           ))}
         </div>
+
+        {projects.length > 4 && (
+          <div className="portfolio-expand-container" data-aos="fade-up">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="portfolio-expand-btn"
+              aria-label={isExpanded ? 'Sembunyikan sebagian portfolio' : 'Lihat semua portfolio'}
+            >
+              {isExpanded ? (
+                <>
+                  Tampilkan Lebih Sedikit <ChevronUp size={18} />
+                </>
+              ) : (
+                <>
+                  Lihat Semua Portfolio ({projects.length}) <ChevronDown size={18} />
+                </>
+              )}
+            </button>
+          </div>
+        )}
       </div>
 
       <style>{`
@@ -221,6 +260,35 @@ export default function Portfolio() {
           color: white;
         }
 
+        .portfolio-expand-container {
+          display: flex;
+          justify-content: center;
+          margin-top: 48px;
+        }
+
+        .portfolio-expand-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: rgba(255, 255, 255, 0.06);
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          padding: 14px 32px;
+          border-radius: 100px;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .portfolio-expand-btn:hover {
+          background: var(--accent);
+          border-color: var(--accent);
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
         @media (max-width: 991px) {
           .portfolio-grid { gap: 24px; }
           .info-title { font-size: 18px; }
@@ -233,6 +301,8 @@ export default function Portfolio() {
           .portfolio-info { flex-direction: column; align-items: stretch; gap: 12px; }
           .info-title { font-size: 18px; }
           .portfolio-btn { width: 100%; font-size: 12px; padding: 10px 16px; }
+          .portfolio-expand-container { margin-top: 36px; }
+          .portfolio-expand-btn { width: 100%; justify-content: center; padding: 12px 24px; font-size: 14px; }
         }
       `}</style>
     </section>
