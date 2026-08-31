@@ -9,7 +9,7 @@ export default function Portfolio() {
       title: 'Mozza Dental',
       type: 'Klinik Gigi & Spesialis',
       image: '/portfolio/mozza-dental.webp',
-      link: 'https://mozzadental.com/',
+      link: 'https://mozza-static-test.pages.dev/',
       desc: 'Website klinik gigi modern dan profesional dengan navigasi cepat, sajian informasi perawatan komprehensif, dan kemudahan reservasi pasien.',
     },
     {
