@@ -4,7 +4,7 @@ export default function Pricing() {
   const plans = [
     {
       name: 'Pondasi Klinik',
-      price: 'Rp 4.900.000',
+      price: 'Rp 5.000.000',
       desc: 'Cocok untuk klinik yang ingin mulai punya website profesional pertama dengan struktur yang rapi dan siap membangun trust calon pasien.',
       features: [
         { text: '5 halaman utama (Home, Profil, Layanan, Galeri, Kontak)', included: true },
@@ -19,8 +19,8 @@ export default function Pricing() {
       popular: false,
     },
     {
-      name: 'Pondasi Klinik Plus',
-      price: 'Rp 9.700.000',
+      name: 'Klinik Plus+',
+      price: 'Rp 9.500.000',
       desc: 'Cocok untuk klinik dengan banyak layanan yang ingin tampil lebih premium dan membangun pondasi SEO lokal yang lebih serius.',
       features: [
         { text: 'Hingga lebih dari 12 halaman spesialistik per-treatment', included: true },
@@ -93,7 +93,7 @@ export default function Pricing() {
             </div>
             <ul className="maintenance-features">
               <li><CheckCircle size={16} className="pricing-check" /> Maintenance website & keamanan</li>
-              <li><CheckCircle size={16} className="pricing-check" /> Konten edukasi medis 8-10 artikel/bulanan</li>
+              <li><CheckCircle size={16} className="pricing-check" /> Konten edukasi medis 6-8 artikel/bulanan</li>
               <li><CheckCircle size={16} className="pricing-check" /> Monitoring performa & ranking</li>
               <li><CheckCircle size={16} className="pricing-check" /> Laporan bulanan transparan</li>
               <li><CheckCircle size={16} className="pricing-check" /> Perbaikan teknis sesuai scope</li>
