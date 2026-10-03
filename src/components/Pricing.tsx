@@ -1,279 +1,845 @@
-import { CheckCircle, X, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 export default function Pricing() {
-  const plans = [
-    {
-      name: 'Pondasi Klinik',
-      price: 'Rp 5.000.000',
-      desc: 'Cocok untuk klinik yang ingin mulai punya website profesional pertama dengan struktur yang rapi dan siap membangun trust calon pasien.',
-      features: [
-        { text: '5 halaman utama (Home, Profil, Layanan, Galeri, Kontak)', included: true },
-        { text: 'Desain premium, responsif mobile, tema medis profesional', included: true },
-        { text: 'Tombol WhatsApp terintegrasi', included: true },
-        { text: 'Basic SEO on-page setup', included: true },
-        { text: 'Google Maps embed lokasi klinik', included: true },
-        { text: '2x revisi mayor', included: true },
-        { text: 'Riset kata kunci & Google Business Profile', included: false },
-      ],
-      cta: 'Pilih Pondasi Klinik',
-      popular: false,
-    },
-    {
-      name: 'Klinik Plus+',
-      price: 'Rp 9.500.000',
-      desc: 'Cocok untuk klinik dengan banyak layanan yang ingin tampil lebih premium dan membangun pondasi SEO lokal yang lebih serius.',
-      features: [
-        { text: 'Hingga lebih dari 12 halaman spesialistik per-treatment', included: true },
-        { text: 'Custom brand identity & UI/UX teroptimasi tinggi', included: true },
-        { text: 'Form reservasi pintar', included: true },
-        { text: 'Riset kata kunci lokal + 10 Artikel SEO Optimized + Google Analytics & Search Console', included: true },
-        { text: 'Full setup & optimasi Google Business Profile', included: true },
-        { text: 'Halaman dokter/tim & halaman lokasi', included: true },
-        { text: 'Unlimited revisi sampai sesuai standar', included: true },
-        { text: 'GRATIS maintenance & update teknis 1 bulan pertama (Value Rp 2,3 Juta)', included: true },
-      ],
-      cta: 'Pilih Klinik Plus+',
-      popular: true,
-    },
-  ];
+  const waNumber = '6282342310221';
+
+  const handleAuditClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const auditElement = document.getElementById('audit');
+    if (auditElement) {
+      auditElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.hash = 'audit';
+    }
+  };
 
   return (
     <section className="pricing section" id="harga">
       <div className="container">
-        <div className="section-header" data-aos="fade-up">
-          <p className="section-label">PAKET WEBSITE KLINIK</p>
-          <h2>Pilih Paket yang Tepat untuk Klinik Anda</h2>
-          <p className="pricing-intro">
-            Tidak semua klinik butuh paket terbesar. Karena itu kami biasanya mulai dari audit untuk melihat prioritas yang paling masuk akal bagi kondisi klinik Anda.
-          </p>
-        </div>
+        <div id="naikin-pricing-direct" aria-label="Pricing NAIKIN dengan semua fitur dan nilai langsung terlihat">
+          <div className="nk-page">
+            {/* Header */}
+            <header className="nk-head" data-aos="fade-up">
+              <span className="nk-eyebrow">PAKET WEBSITE KLINIK</span>
+              <h2>
+                Pilih pondasi digital<br />
+                yang tepat untuk klinik Anda.
+              </h2>
+              <p>
+                Dari website pertama hingga halaman treatment yang lengkap.<br />
+                Pilih sesuai kebutuhan klinik, dengan cakupan yang jelas.
+              </p>
+            </header>
 
-        <div className="pricing-grid">
-          {plans.map((p, i) => (
-            <div
-              key={i}
-              className={`pricing-card liquid-glass-card ${p.popular ? 'pricing-popular' : ''}`}
-              data-aos="fade-up"
-              data-aos-delay={i * 100}
-            >
-              {p.popular && (
-                <div className="pricing-badge"><Star size={14} fill="#2563EB" /> Terpopuler</div>
-              )}
-              <h3 className="pricing-name">{p.name}</h3>
-              <div className="pricing-price">{p.price}</div>
-              <p className="pricing-desc">{p.desc}</p>
-              <ul className="pricing-features">
-                {p.features.map((f, j) => (
-                  <li key={j} className={f.included ? '' : 'not-included'}>
-                    {f.included ? (
-                      <CheckCircle size={16} className="pricing-check" />
-                    ) : (
-                      <X size={16} className="pricing-x" />
-                    )}
-                    <span>{f.text}</span>
+            {/* Grid 2 Cards */}
+            <div className="nk-grid">
+              {/* Card 1: Klinik Basic */}
+              <article className="nk-card" aria-label="Klinik Basic" data-aos="fade-up" data-aos-delay="100">
+                <div className="nk-content">
+                  <h3>Klinik Basic</h3>
+                  <p className="nk-desc">
+                    Satu tempat yang rapi untuk informasi klinik, layanan, dan akses booking pasien.
+                  </p>
+
+                  <div className="nk-price-area">
+                    <div className="nk-reference">
+                      Total nilai layanan <s>Rp6.750.000</s>
+                    </div>
+                    <div className="nk-price">Rp5.000.000</div>
+                    <div className="nk-period">Sekali bayar · Pembuatan website</div>
+                  </div>
+
+                  <div className="nk-caption">Yang Anda dapatkan</div>
+
+                  <ul className="nk-list">
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        <strong>6 halaman website</strong>
+                        <small>6 × Rp1.000.000</small>
+                      </span>
+                      <span className="nk-amount">Rp6.000.000</span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        <strong>3 artikel SEO awal</strong>
+                        <small>3 × Rp250.000</small>
+                      </span>
+                      <span className="nk-amount">Rp750.000</span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>Desain profesional & mobile-friendly</span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        Tombol WhatsApp terintegrasi
+                        <small>Memudahkan pertanyaan dan booking</small>
+                      </span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>Setup dasar SEO on-page</span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>Google Maps lokasi klinik</span>
+                    </li>
+                  </ul>
+
+                  <p className="nk-page-note">
+                    6 halaman: Home, Profil, Layanan, Galeri, Kontak, dan Artikel.
+                  </p>
+                  <p className="nk-fit">2 kali revisi mayor.</p>
+
+                  <div className="nk-footer">
+                    <a
+                      href={`https://wa.me/${waNumber}?text=Halo%20NAIKIN%2C%20saya%20tertarik%20konsultasi%20paket%20Klinik%20Basic`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nk-button nk-outline"
+                    >
+                      Konsultasikan Klinik Basic →
+                    </a>
+                    <div className="nk-note">Diskusikan kebutuhan klinik sebelum memutuskan.</div>
+                  </div>
+                </div>
+              </article>
+
+              {/* Card 2: Klinik Premium+ */}
+              <article className="nk-card nk-plus" aria-label="Klinik Premium+" data-aos="fade-up" data-aos-delay="200">
+                <div className="nk-content">
+                  <div className="nk-badge">
+                    <Star size={13} fill="currentColor" />
+                    <span>Rekomendasi</span>
+                  </div>
+
+                  <h3>Klinik Premium+</h3>
+                  <p className="nk-desc">
+                    Halaman treatment lebih lengkap, konten edukasi awal, dan pondasi SEO lokal sejak launching.
+                  </p>
+
+                  <div className="nk-price-area">
+                    <div className="nk-reference">
+                      Total nilai layanan <s>Rp16.800.000</s>
+                    </div>
+                    <div className="nk-price">Rp9.500.000</div>
+                    <div className="nk-period">Sekali bayar · Pembuatan website</div>
+                  </div>
+
+                  <div className="nk-caption">Yang Anda dapatkan</div>
+
+                  <ul className="nk-list">
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        <strong>12 halaman website</strong>
+                        <small>12 × Rp1.000.000 · sesuai scope</small>
+                      </span>
+                      <span className="nk-amount">Rp12.000.000</span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        <strong>10 artikel SEO awal</strong>
+                        <small>10 × Rp250.000</small>
+                      </span>
+                      <span className="nk-amount">Rp2.500.000</span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        Desain sesuai identitas klinik
+                        <small>Mobile-friendly & form reservasi</small>
+                      </span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        Riset keyword & setup SEO lokal
+                        <small>Google Business Profile</small>
+                      </span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        Analytics & Search Console
+                        <small>Pondasi pengukuran performa</small>
+                      </span>
+                    </li>
+                    <li className="nk-row">
+                      <span className="nk-check" aria-hidden="true">✓</span>
+                      <span>
+                        Halaman dokter & lokasi
+                        <small>Dalam cakupan 12 halaman</small>
+                      </span>
+                    </li>
+                  </ul>
+
+                  <div className="nk-benefit">
+                    <strong>Bonus maintenance bulan pertama · Rp2.300.000</strong>
+                    <p>
+                      Maintenance & update teknis tanpa biaya tambahan. Sudah dihitung dalam total nilai layanan Rp16.800.000.
+                    </p>
+                  </div>
+
+                  <p className="nk-fit">Revisi hingga sesuai standar dalam scope paket.</p>
+
+                  <div className="nk-footer">
+                    <a
+                      href={`https://wa.me/${waNumber}?text=Halo%20NAIKIN%2C%20saya%20tertarik%20konsultasi%20paket%20Klinik%20Premium%2B`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nk-button"
+                    >
+                      Konsultasikan Klinik Premium+ →
+                    </a>
+                    <div className="nk-note">Diskusikan kebutuhan klinik sebelum memutuskan.</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            {/* Divider */}
+            <div className="nk-divider" data-aos="fade-up">
+              Setelah website live, lanjutkan jika dibutuhkan
+            </div>
+
+            {/* Retainer Growth+ Card */}
+            <article className="nk-growth" aria-label="Retainer Growth+" data-aos="fade-up">
+              <div className="nk-growth-left">
+                <div className="nk-label">OPSIONAL · LAYANAN BULANAN</div>
+                <h3>Retainer Growth+</h3>
+                <p className="nk-growth-desc">
+                  Dukungan AI Agents khusus SEO klinik, konten bulanan, dan perawatan website untuk pertumbuhan digital yang terarah.
+                </p>
+                <div className="nk-price-area">
+                  <div className="nk-reference">
+                    Total nilai layanan <s>Rp8.000.000/bulan</s>
+                  </div>
+                  <div className="nk-price">
+                    Rp3.000.000 <span>/bulan</span>
+                  </div>
+                </div>
+
+                <div className="nk-growth-cta">
+                  <a
+                    href={`https://wa.me/${waNumber}?text=Halo%20NAIKIN%2C%20saya%20ingin%20diskusi%20tentang%20Retainer%20Growth%2B`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nk-button"
+                  >
+                    Diskusikan Retainer Growth+ →
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <section className="nk-ai" aria-label="Keunggulan utama: AI Agents khusus SEO klinik">
+                  <div className="nk-ai-top">
+                    AI Agents khusus SEO klinik
+                  </div>
+                  <h4>AI Agents khusus SEO klinik</h4>
+                  <p>Membantu analisis SEO dan menentukan prioritas optimasi klinik setiap bulan.</p>
+                  <div className="nk-ai-value">
+                    <span>Nilai layanan · sudah termasuk</span>
+                    <strong>Rp3.500.000/bulan</strong>
+                  </div>
+                </section>
+
+                <ul className="nk-list">
+                  <li className="nk-row">
+                    <span>
+                      Maintenance website
+                      <small>Perawatan teknis, keamanan & performa</small>
+                    </span>
+                    <span className="nk-amount">Rp1.000.000</span>
                   </li>
-                ))}
-              </ul>
-              <a
-                href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20tertarik%20paket%20ini!"
-                className={`btn-primary pricing-btn ${p.popular ? '' : 'btn-outline'}`}
-              >  {p.cta}
+                  <li className="nk-row">
+                    <span>
+                      6 artikel SEO per bulan
+                      <small>6 × Rp250.000</small>
+                    </span>
+                    <span className="nk-amount">Rp1.500.000</span>
+                  </li>
+                  <li className="nk-row">
+                    <span>
+                      Audit & laporan bulanan
+                      <small>Ringkasan performa & langkah berikutnya</small>
+                    </span>
+                    <span className="nk-amount">Rp2.000.000</span>
+                  </li>
+                  <li className="nk-row">
+                    <span>
+                      Google Business Profile,<br />
+                      Analytics & Search Console
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            {/* Note & Free Audit link */}
+            <p className="nk-value-note" data-aos="fade-up">
+              Nilai layanan adalah penjumlahan komponen yang tercantum, bukan harga paket sebelumnya.
+            </p>
+
+            <div className="nk-audit" data-aos="fade-up">
+              <span>Belum yakin harus mulai dari mana?</span>
+              <a href="#audit" onClick={handleAuditClick} className="nk-audit-btn">
+                Minta audit gratis →
               </a>
             </div>
-          ))}
-        </div>
-
-        {/* SEO Maintenance Add-on */}
-        <div className="maintenance-addon" data-aos="fade-up">
-          <div className="maintenance-inner liquid-glass-card">
-            <div className="maintenance-info">
-              <h3>SEO & Conversion Care</h3>
-              <div className="maintenance-price">Rp 2.300.000<span>/bulan</span></div>
-              <p>Website adalah pondasi. SEO dan conversion care membantu website tetap aktif, terawat, dan terus dioptimasi secara berkelanjutan.</p>
-            </div>
-            <ul className="maintenance-features">
-              <li><CheckCircle size={16} className="pricing-check" /> Maintenance website & keamanan</li>
-              <li><CheckCircle size={16} className="pricing-check" /> Konten edukasi medis 6-8 artikel/bulanan</li>
-              <li><CheckCircle size={16} className="pricing-check" /> Monitoring performa & ranking</li>
-              <li><CheckCircle size={16} className="pricing-check" /> Laporan bulanan transparan</li>
-              <li><CheckCircle size={16} className="pricing-check" /> Perbaikan teknis sesuai scope</li>
-            </ul>
-            <a
-              href="https://wa.me/6282342310221?text=Halo%20NAIKIN%2C%20saya%20ingin%20tanya%20tentang%20SEO%20bulanan"
-              className="btn-ghost maintenance-btn"
-            >Tanya Tentang Care Plan</a>
           </div>
         </div>
       </div>
 
       <style>{`
         .pricing {
-          background: var(--white);
+          background: #FFFFFF;
+          padding: 80px 0;
         }
-        .pricing-intro {
-          font-size: 16px;
-          max-width: 600px;
+
+        #naikin-pricing-direct {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          color: #111a31;
+          color-scheme: light;
+          --nk-blue: #2560ef;
+          --nk-blue-hover: #1b4ed8;
+          --nk-muted: #596780;
+          --nk-line: #e4eaf3;
+          --nk-soft: #f0f5ff;
+        }
+
+        #naikin-pricing-direct * {
+          box-sizing: border-box;
+        }
+
+        #naikin-pricing-direct .nk-page {
+          background: #ffffff;
+          padding: 38px 24px 30px;
+          max-width: 960px;
           margin: 0 auto;
+        }
+
+        #naikin-pricing-direct .nk-head {
           text-align: center;
+          max-width: 580px;
+          margin: 0 auto 36px;
         }
-        .pricing-grid {
+
+        #naikin-pricing-direct .nk-eyebrow {
+          font-size: 11px;
+          font-weight: 750;
+          letter-spacing: 1.4px;
+          color: var(--nk-blue);
+          display: inline-block;
+        }
+
+        #naikin-pricing-direct h2 {
+          font-size: 32px;
+          line-height: 1.22;
+          letter-spacing: -1px;
+          margin: 12px 0;
+          font-weight: 800;
+          color: #111a31;
+        }
+
+        #naikin-pricing-direct p {
+          font-size: 14px;
+          line-height: 1.65;
+          color: var(--nk-muted);
+          margin: 0;
+        }
+
+        #naikin-pricing-direct .nk-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 28px;
-          margin-bottom: 48px;
-          align-items: start;
-          max-width: 880px;
-          margin-left: auto;
-          margin-right: auto;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+          align-items: stretch;
         }
-        .pricing-card {
-          padding: 40px 32px;
+
+        #naikin-pricing-direct .nk-card {
+          border: 1px solid var(--nk-line);
+          border-radius: 18px;
+          background: #ffffff;
           display: flex;
           flex-direction: column;
-          position: relative;
-          z-index: 0;
+          overflow: hidden;
+          min-width: 0;
+          box-shadow: 0 10px 32px rgba(17, 44, 102, 0.04);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-        .pricing-popular {
-          border: 2px solid rgba(37,99,235,0.50) !important;
-          box-shadow:
-            0 16px 48px rgba(37,99,235,0.20),
-            0 2px 0 rgba(255,255,255,0.95) inset !important;
+
+        #naikin-pricing-direct .nk-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 14px 40px rgba(17, 44, 102, 0.08);
         }
-        .pricing-badge {
+
+        #naikin-pricing-direct .nk-plus {
+          border: 1.5px solid #668df6;
+          box-shadow: 0 12px 36px rgba(37, 96, 239, 0.08);
+        }
+
+        #naikin-pricing-direct .nk-plus:hover {
+          box-shadow: 0 16px 48px rgba(37, 96, 239, 0.13);
+        }
+
+        #naikin-pricing-direct .nk-badge {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          background: rgba(255,255,255,0.65);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(37,99,235,0.25);
-          border-radius: 50px;
-          padding: 6px 16px;
+          background: #eff6ff;
+          border: 1px solid #bfdbfe;
+          border-radius: 9999px;
+          padding: 5px 14px;
           font-size: 13px;
           font-weight: 600;
-          color: var(--accent);
-          margin-bottom: 16px;
+          color: var(--nk-blue);
+          margin-bottom: 14px;
           width: fit-content;
         }
-        .pricing-name {
-          font-family: var(--font-body);
-          font-weight: 600;
-          font-size: 18px;
-          color: var(--muted);
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          margin-bottom: 8px;
-        }
-        .pricing-price {
-          font-family: var(--font-display);
-          font-weight: 800;
-          font-size: 36px;
-          color: var(--accent);
-          margin-bottom: 8px;
-        }
-        .pricing-desc {
-          font-size: 14px;
-          color: var(--muted);
-          margin-bottom: 28px;
-          line-height: 1.6;
-        }
-        .pricing-features {
+
+        #naikin-pricing-direct .nk-content {
+          padding: 28px 24px 24px;
           display: flex;
           flex-direction: column;
-          gap: 12px;
-          margin-bottom: 32px;
           flex: 1;
         }
-        .pricing-features li {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 14px;
-          font-weight: 500;
-          color: var(--text-primary);
-        }
-        .pricing-features li.not-included {
-          color: var(--muted);
-          opacity: 0.6;
-        }
-        .pricing-check {
-          color: var(--accent);
-          flex-shrink: 0;
-        }
-        .pricing-x {
-          color: #D1D5DB;
-          flex-shrink: 0;
-        }
-        .pricing-btn {
-          text-align: center;
-          justify-content: center;
-          width: 100%;
-        }
-        .btn-outline {
-          background: transparent !important;
-          border: 2px solid var(--accent) !important;
-          color: var(--accent) !important;
-          box-shadow: none !important;
-        }
-        .btn-outline:hover {
-          background: var(--accent-soft) !important;
+
+        #naikin-pricing-direct h3 {
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: -0.45px;
+          margin: 0 0 8px;
+          color: #111a31;
         }
 
-        /* Maintenance Addon */
-        .maintenance-addon {
-          max-width: 880px;
-          margin: 0 auto;
+        #naikin-pricing-direct .nk-desc {
+          min-height: 80px;
         }
-        .maintenance-inner {
-          display: grid;
-          grid-template-columns: 1fr 1fr auto;
-          gap: 40px;
-          align-items: center;
-          padding: 40px !important;
+
+        #naikin-pricing-direct .nk-price-area {
+          margin: 18px 0 20px;
         }
-        .maintenance-info h3 {
-          font-size: 22px;
-          margin-bottom: 8px;
+
+        #naikin-pricing-direct .nk-reference {
+          font-size: 12px;
+          color: var(--nk-muted);
+          min-height: 18px;
+          margin-bottom: 6px;
+          line-height: 1.5;
         }
-        .maintenance-price {
-          font-family: var(--font-display);
-          font-weight: 800;
-          font-size: 28px;
-          color: var(--accent);
-          margin-bottom: 12px;
+
+        #naikin-pricing-direct .nk-reference s {
+          margin-left: 5px;
+          font-size: 14.5px;
+          font-weight: 700;
+          color: #64748b;
+          text-decoration-thickness: 1.5px;
         }
-        .maintenance-price span {
-          font-size: 16px;
-          font-weight: 500;
-          color: var(--muted);
-        }
-        .maintenance-info p {
-          font-size: 14px;
-          color: var(--muted);
-          line-height: 1.6;
-        }
-        .maintenance-features {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
-        .maintenance-features li {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          font-size: 14px;
-          font-weight: 500;
-          color: var(--text-primary);
-        }
-        .maintenance-btn {
+
+        #naikin-pricing-direct .nk-price {
+          font-size: 32px;
+          line-height: 1.25;
+          letter-spacing: -1.2px;
+          font-weight: 700;
+          color: #22304a;
           white-space: nowrap;
         }
 
-        @media (max-width: 1023px) {
-          .pricing-grid { grid-template-columns: 1fr; max-width: 440px; }
-          .maintenance-inner { grid-template-columns: 1fr; text-align: center; }
-          .maintenance-features { align-items: center; }
-          .maintenance-btn { width: 100%; justify-content: center; }
+        #naikin-pricing-direct .nk-plus .nk-price {
+          font-size: 40px;
+          font-weight: 800;
+          color: var(--nk-blue);
+        }
+
+        #naikin-pricing-direct .nk-period {
+          font-size: 12px;
+          color: var(--nk-muted);
+          margin-top: 5px;
+        }
+
+        #naikin-pricing-direct .nk-caption {
+          font-size: 12px;
+          font-weight: 600;
+          color: #5a6780;
+          padding: 0 0 11px;
+          border-bottom: 1px solid var(--nk-line);
+        }
+
+        #naikin-pricing-direct .nk-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        #naikin-pricing-direct .nk-row {
+          display: grid;
+          grid-template-columns: 16px minmax(0, 1fr) auto;
+          gap: 8px;
+          padding: 13px 0;
+          border-bottom: 1px solid #edf1f7;
+          align-items: start;
+          font-size: 14px;
+          line-height: 1.55;
+        }
+
+        #naikin-pricing-direct .nk-row strong {
+          font-weight: 600;
+          color: #111a31;
+        }
+
+        #naikin-pricing-direct .nk-row .nk-check {
+          color: var(--nk-blue);
+          font-weight: 700;
+          line-height: 1.5;
+        }
+
+        #naikin-pricing-direct .nk-row small {
+          display: block;
+          font-size: 12px;
+          color: var(--nk-muted);
+          margin-top: 3px;
+        }
+
+        #naikin-pricing-direct .nk-amount {
+          font-size: 12px;
+          font-weight: 400;
+          color: var(--nk-muted);
+          white-space: nowrap;
+          text-align: right;
+          padding-top: 2px;
+        }
+
+        #naikin-pricing-direct .nk-benefit {
+          padding: 14px;
+          background: var(--nk-soft);
+          border-radius: 11px;
+          margin-top: 16px;
+          border: 1px solid #e0ebff;
+        }
+
+        #naikin-pricing-direct .nk-benefit strong {
+          display: block;
+          font-size: 13.5px;
+          font-weight: 600;
+          line-height: 1.5;
+          color: #1c4db5;
+          margin-bottom: 5px;
+        }
+
+        #naikin-pricing-direct .nk-benefit p {
+          font-size: 12px;
+          line-height: 1.6;
+          color: #3b5280;
+        }
+
+        #naikin-pricing-direct .nk-page-note {
+          font-size: 12px;
+          line-height: 1.6;
+          color: var(--nk-muted);
+          padding-top: 15px;
+        }
+
+        #naikin-pricing-direct .nk-fit {
+          font-size: 12px;
+          color: var(--nk-muted);
+          padding-top: 14px;
+          line-height: 1.6;
+        }
+
+        #naikin-pricing-direct .nk-footer {
+          margin-top: auto;
+          padding-top: 24px;
+        }
+
+        #naikin-pricing-direct .nk-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid var(--nk-blue);
+          border-radius: 28px;
+          background: var(--nk-blue);
+          color: #ffffff;
+          font-family: inherit;
+          font-size: 14px;
+          font-weight: 600;
+          width: 100%;
+          padding: 13px 12px;
+          min-height: 46px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          box-shadow: 0 4px 14px rgba(37, 96, 239, 0.18);
+        }
+
+        #naikin-pricing-direct .nk-button:hover {
+          background: var(--nk-blue-hover);
+          border-color: var(--nk-blue-hover);
+          transform: translateY(-1px);
+          box-shadow: 0 6px 20px rgba(37, 96, 239, 0.28);
+        }
+
+        #naikin-pricing-direct .nk-outline {
+          background: #ffffff;
+          color: var(--nk-blue);
+          box-shadow: none;
+        }
+
+        #naikin-pricing-direct .nk-outline:hover {
+          background: var(--nk-soft);
+          color: var(--nk-blue-hover);
+          border-color: var(--nk-blue);
+          transform: translateY(-1px);
+        }
+
+        #naikin-pricing-direct .nk-note {
+          font-size: 12px;
+          text-align: center;
+          color: var(--nk-muted);
+          margin: 9px 0 0;
+          line-height: 1.6;
+        }
+
+        #naikin-pricing-direct .nk-divider {
+          display: flex;
+          gap: 14px;
+          align-items: center;
+          margin: 36px 0 22px;
+          font-size: 12px;
+          font-weight: 500;
+          color: var(--nk-muted);
+          text-align: center;
+        }
+
+        #naikin-pricing-direct .nk-divider:before,
+        #naikin-pricing-direct .nk-divider:after {
+          content: '';
+          height: 1px;
+          flex: 1;
+          background: var(--nk-line);
+        }
+
+        #naikin-pricing-direct .nk-growth {
+          background: #f3f7ff;
+          border: 1px solid #dfe8fc;
+          border-radius: 18px;
+          padding: 28px;
+          display: grid;
+          grid-template-columns: 0.95fr 1.05fr;
+          gap: 30px;
+          align-items: start;
+        }
+
+        #naikin-pricing-direct .nk-growth-left {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #naikin-pricing-direct .nk-growth-desc {
+          margin: 6px 0 16px;
+        }
+
+        #naikin-pricing-direct .nk-growth .nk-price {
+          font-size: 36px;
+          font-weight: 750;
+          color: var(--nk-blue);
+        }
+
+        #naikin-pricing-direct .nk-growth .nk-price span {
+          display: inline-block;
+          font-size: 13px;
+          line-height: 1.5;
+          letter-spacing: 0;
+          font-weight: 400;
+          color: var(--nk-muted);
+          margin-left: 2px;
+        }
+
+        #naikin-pricing-direct .nk-growth-cta {
+          margin-top: 18px;
+          max-width: 320px;
+        }
+
+        #naikin-pricing-direct .nk-growth .nk-row {
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 11px 0;
+          border-color: #dfe8f7;
+        }
+
+        #naikin-pricing-direct .nk-growth .nk-row:first-child {
+          padding-top: 0;
+        }
+
+        #naikin-pricing-direct .nk-growth .nk-row:last-child {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+
+        #naikin-pricing-direct .nk-label {
+          font-size: 11px;
+          color: #1c4db5;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          margin-bottom: 9px;
+          text-transform: uppercase;
+        }
+
+        #naikin-pricing-direct .nk-ai {
+          background: #ffffff;
+          border: 1px solid #e0ebfb;
+          border-radius: 12px;
+          padding: 18px;
+          margin-bottom: 18px;
+          box-shadow: 0 2px 10px rgba(17, 44, 102, 0.02);
+        }
+
+        #naikin-pricing-direct .nk-ai-top {
+          color: var(--nk-blue);
+          font-size: 11.5px;
+          font-weight: 750;
+          letter-spacing: 0.5px;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+        }
+
+        #naikin-pricing-direct .nk-ai h4 {
+          font-size: 19px;
+          line-height: 1.3;
+          letter-spacing: -0.3px;
+          margin: 0 0 9px;
+          color: #153676;
+          font-weight: 700;
+        }
+
+        #naikin-pricing-direct .nk-ai p {
+          font-size: 13.5px;
+          color: var(--nk-muted);
+        }
+
+        #naikin-pricing-direct .nk-ai-value {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px 12px;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 14px;
+          padding-top: 12px;
+          border-top: 1px solid #e0e9fb;
+          font-size: 11.5px;
+          color: var(--nk-muted);
+        }
+
+        #naikin-pricing-direct .nk-ai-value strong {
+          font-size: 12.5px;
+          font-weight: 600;
+          color: #153676;
+        }
+
+        #naikin-pricing-direct .nk-value-note {
+          font-size: 11.5px;
+          color: var(--nk-muted);
+          margin: 18px 0 0;
+          line-height: 1.6;
+          text-align: center;
+        }
+
+        #naikin-pricing-direct .nk-audit {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          margin: 22px 0 0;
+          font-size: 13px;
+          color: var(--nk-muted);
+        }
+
+        #naikin-pricing-direct .nk-audit .nk-audit-btn {
+          font-family: inherit;
+          font-size: 13px;
+          font-weight: 700;
+          border: 0;
+          background: transparent;
+          color: var(--nk-blue);
+          padding: 8px 6px;
+          min-height: 40px;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          text-decoration: none;
+          transition: color 0.15s ease, text-decoration 0.15s ease;
+        }
+
+        #naikin-pricing-direct .nk-audit .nk-audit-btn:hover {
+          color: var(--nk-blue-hover);
+          text-decoration: underline;
+        }
+
+        @media (max-width: 680px) {
+          .pricing {
+            padding: 50px 0;
+          }
+          #naikin-pricing-direct .nk-page {
+            padding: 24px 12px 18px;
+          }
+          #naikin-pricing-direct h2 {
+            font-size: 26px;
+          }
+          #naikin-pricing-direct .nk-grid,
+          #naikin-pricing-direct .nk-growth {
+            grid-template-columns: 1fr;
+          }
+          #naikin-pricing-direct .nk-desc {
+            min-height: 0;
+          }
+          #naikin-pricing-direct .nk-content {
+            padding: 24px 18px 20px;
+          }
+          #naikin-pricing-direct .nk-price {
+            font-size: 30px;
+          }
+          #naikin-pricing-direct .nk-plus .nk-price {
+            font-size: 34px;
+          }
+          #naikin-pricing-direct .nk-row {
+            column-gap: 8px;
+          }
+          #naikin-pricing-direct .nk-growth {
+            padding: 22px 18px;
+            gap: 20px;
+          }
+          #naikin-pricing-direct .nk-growth .nk-price {
+            font-size: 32px;
+          }
+          #naikin-pricing-direct .nk-growth-cta {
+            max-width: none;
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 380px) {
+          #naikin-pricing-direct .nk-row {
+            grid-template-columns: 16px minmax(0, 1fr);
+          }
+          #naikin-pricing-direct .nk-amount {
+            grid-column: 2;
+            text-align: left;
+            margin-top: 2px;
+          }
+          #naikin-pricing-direct .nk-growth .nk-row {
+            grid-template-columns: 1fr;
+          }
+          #naikin-pricing-direct .nk-growth .nk-amount {
+            grid-column: 1;
+            margin-top: 2px;
+          }
+          #naikin-pricing-direct .nk-price {
+            font-size: 28px;
+          }
         }
       `}</style>
     </section>
