@@ -11,6 +11,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -134,10 +135,12 @@ p {
   padding: 0 var(--gutter);
 }
 
-.section {
+.section,
+section[id] {
   padding: var(--section-pad-desktop) 0;
   position: relative;
   z-index: 1;
+  scroll-margin-top: 100px;
 }
 
 .section-header {

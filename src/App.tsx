@@ -46,6 +46,56 @@ export default function App() {
         offset: 60,
       });
     }
+
+    // Handle hash scrolling on page load (e.g. #harga, #audit, #layanan)
+    const scrollToHash = (behavior: ScrollBehavior = 'smooth') => {
+      const currentHash = window.location.hash;
+      if (!currentHash) return;
+      const targetId = decodeURIComponent(currentHash.replace('#', ''));
+      if (!targetId) return;
+
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior });
+      }
+    };
+
+    if (window.location.hash) {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+
+      // Initial scroll attempts to compensate for SPA mounting & image loading
+      scrollToHash('auto');
+      const t1 = setTimeout(() => scrollToHash('smooth'), 120);
+      const t2 = setTimeout(() => scrollToHash('smooth'), 450);
+      const t3 = setTimeout(() => scrollToHash('smooth'), 900);
+
+      const onLoad = () => scrollToHash('smooth');
+      window.addEventListener('load', onLoad);
+
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+        clearTimeout(t3);
+        window.removeEventListener('load', onLoad);
+      };
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const currentHash = window.location.hash;
+      if (!currentHash) return;
+      const targetId = decodeURIComponent(currentHash.replace('#', ''));
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   if (isThankYou) {

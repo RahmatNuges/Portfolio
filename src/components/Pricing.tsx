@@ -300,6 +300,7 @@ export default function Pricing() {
         .pricing {
           background: #FFFFFF;
           padding: 80px 0;
+          scroll-margin-top: 100px;
         }
 
         #naikin-pricing-direct {
