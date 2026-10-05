@@ -20,6 +20,13 @@ export default function Portfolio() {
       desc: 'Website studio perawatan & estetika gigi modern dengan tampilan elegan, struktur layanan informatif, dan optimasi pengalaman pasien.',
     },
     {
+      title: 'DOP Dental',
+      type: 'Klinik Dokter Gigi (Kota Jambi)',
+      image: '/portfolio/dop-dental.webp',
+      link: 'https://dopdental.com/',
+      desc: 'Website klinik dokter gigi modern dan ramah di Kota Jambi dengan sistem reservasi WhatsApp pintar, navigasi interaktif, dan panduan perawatan terstruktur.',
+    },
+    {
       title: 'Klinik Jelita',
       type: 'Klinik Kecantikan & Anti-Aging',
       image: '/portfolio/klinik-jelita.webp',
