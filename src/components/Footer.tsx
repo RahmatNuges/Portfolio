@@ -50,6 +50,11 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
+          <nav aria-label="Informasi Collector" className="collector-footer-links">
+            <a href="/collector/">NAIKIN Collector</a>
+            <a href="/privacy/">Kebijakan Privasi</a>
+            <a href="/terms/">Ketentuan Penggunaan</a>
+          </nav>
           <p>© 2026 NAIKIN. Spesialis Website & SEO Klinik. Semua hak dilindungi.</p>
         </div>
       </div>
@@ -132,6 +137,9 @@ export default function Footer() {
           padding: 32px 0;
           text-align: center;
         }
+        .collector-footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; margin-bottom: 20px; font-size: 14px; color: #CBD5E1; }
+        .collector-footer-links a:hover { color: #FFFFFF; text-decoration: underline; }
+        .collector-footer-links a:focus-visible { outline: 2px solid #FFFFFF; outline-offset: 4px; }
         .footer-bottom p {
           font-size: 14px;
           color: #6B7280;
